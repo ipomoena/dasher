@@ -53,11 +53,11 @@ class CPopup : public ATL::CWindowImpl<CPopup> {
   ~CPopup();
   
   HWND Create(HWND hParent, bool bNewWithDate);
-  
+
   // Superclass the built-in EDIT window class
   DECLARE_WND_SUPERCLASS(NULL, _T("EDIT"))
-    
-  BEGIN_MSG_MAP( CPopup )
+
+  BEGIN_MSG_MAP(CPopup)
 
   END_MSG_MAP()
 
@@ -76,6 +76,8 @@ class CPopup : public ATL::CWindowImpl<CPopup> {
   
   // called when a new character falls under the crosshair
   void output(const std::string & sText);
+
+  void updateDisplay(const std::string sText);
     
   // remove the previous character: called when we steer/reverse the crosshair out of a node
   void deletetext(const std::string & sText);

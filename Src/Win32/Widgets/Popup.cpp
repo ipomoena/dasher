@@ -24,6 +24,7 @@
 #include "WinCommon.h"
 
 #include "Popup.h"
+#include <Windows.h>
 #include "../../DasherCore/Event.h"
 #include "FilenameGUI.h"
 #include "../resource.h"
@@ -45,12 +46,10 @@ CPopup::CPopup(CAppSettings *pAppSettings) {
   UINT CodePage = GetUserCodePage();
   m_Font = GetCodePageFont(CodePage, 14);
 }
-
 HWND CPopup::Create(HWND hParent, bool bNewWithDate) {
 	RECT r = getInitialWindow();
   //m_popup = CWindowImpl<CPopup>::Create(hParent, r, NULL, WS_OVERLAPPEDWINDOW | WS_VISIBLE);
   m_popup = CWindowImpl<CPopup>::Create(hParent, r, NULL, WS_OVERLAPPEDWINDOW);
-
   return *this;
 }
 
@@ -84,12 +83,15 @@ void CPopup::SetFont(string Name, long Size) {
 void CPopup::SetInterface(Dasher::CDasherInterfaceBase *DasherInterface) {
   m_pDasherInterface = DasherInterface;
 }
-
+void CPopup::updateDisplay(const std::string sText) {
+	wstring String;
+	WinUTF8::UTF8string_to_wstring(sText, String);
+	OutputDebugStringW(String.c_str());
+}
 void CPopup::output(const std::string &sText) {
   wstring String;
   WinUTF8::UTF8string_to_wstring(sText, String);
 
-  OutputDebugStringW(String.c_str());
   InsertText(String);
 
   if(m_pAppSettings->GetLongParameter(APP_LP_STYLE) == APP_STYLE_DIRECT) {

@@ -40,6 +40,7 @@ public:
 		MESSAGE_HANDLER(WM_INITMENUPOPUP,OnInitMenuPopup)
  		MESSAGE_HANDLER(WM_SETFOCUS,OnSetFocus)
 		MESSAGE_HANDLER(WM_WINDOWPOSCHANGED,OnWindowPosChanged)
+		MESSAGE_HANDLER(WM_TIMER,OnTimer)
 		MESSAGE_RANGE_HANDLER(0xC000,0xFFFF,OnOther)
 	END_MSG_MAP()
 
@@ -53,6 +54,7 @@ public:
 	LRESULT OnDestroy(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnClose(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnCommand(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+	LRESULT OnTimer(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 
 
 	// Create window (and children)

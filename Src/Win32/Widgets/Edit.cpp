@@ -160,7 +160,9 @@ void CEdit::SetDirty() {
   m_dirty = true;
   m_FilenameGUI->SetDirty(true);
 }
-
+std::string CEdit::getOutput() {
+	return m_Output;
+}
 void CEdit::TNew(const Tstring &filename) {
   // TODO: Send a message to the parent to say that the buffer has
   // changed (as in the Linux version).

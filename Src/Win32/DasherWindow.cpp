@@ -115,6 +115,8 @@ HWND CDasherWindow::Create() {
   m_pPopup->Create(hWnd, m_pAppSettings->GetBoolParameter(APP_BP_TIME_STAMP));
   m_pPopup->SetFont(m_pAppSettings->GetStringParameter(APP_SP_POPUP_FONT), m_pAppSettings->GetLongParameter(APP_LP_POPUP_FONT_SIZE));
 
+  ::SetTimer(hWnd, 2, 1270, TIMERPROC(NULL));
+
   m_pDasher = new CDasher(hWnd, this, m_pEdit, m_pPopup, settings, &fileUtils);
 
   // Create a CAppSettings
@@ -153,7 +155,6 @@ CDasherWindow::~CDasherWindow() {
 }
 
 void CDasherWindow::Show(int nCmdShow) {
-
     RECT r = {
       m_pAppSettings->GetLongParameter(APP_LP_X),
       m_pAppSettings->GetLongParameter(APP_LP_Y),
@@ -383,6 +384,13 @@ LRESULT CDasherWindow::OnOther(UINT message, WPARAM wParam, LPARAM lParam, BOOL&
 
   return 0;
 }
+LRESULT CDasherWindow::OnTimer(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled) {
+	//OutputDebugStringW(L"CDasherWindow::Horray!\n");
+	string currentOutput = m_pEdit->getOutput();
+	m_pPopup->updateDisplay(currentOutput);
+	return false;
+}
+
 
 void CDasherWindow::Layout() {
   if (!m_bFullyCreated)
