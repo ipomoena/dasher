@@ -71,7 +71,7 @@ public:
 #endif
   bool SupportsClipboard() override { return true; };
   void CopyToClipboard(const std::string &text) override;
-  
+  void configurePopupTimer(bool enable);
 private:
   virtual void CreateModules() override;
 

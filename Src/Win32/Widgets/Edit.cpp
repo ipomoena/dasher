@@ -161,7 +161,10 @@ void CEdit::SetDirty() {
   m_FilenameGUI->SetDirty(true);
 }
 std::string CEdit::getOutput() {
-	return m_Output;
+	CString displayText;
+	GetWindowText(displayText);
+	std::wstring s(displayText);
+	return WinUTF8::wstring_to_UTF8string(s.c_str());
 }
 void CEdit::TNew(const Tstring &filename) {
   // TODO: Send a message to the parent to say that the buffer has

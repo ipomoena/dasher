@@ -62,6 +62,7 @@ public:
 	HWND Create();
 
 	void Show(int nCmdShow);
+	void configurePopupTimer(bool enable);
 
   void HandleWinEvent(HWINEVENTHOOK hWinEventHook, DWORD event, HWND hwnd, 
     LONG idObject, LONG idChild, DWORD dwEventThread, DWORD dwmsEventTime);
@@ -77,6 +78,8 @@ private:
 
   bool m_bFullyCreated;
 	Dasher::CDasher *m_pDasher;
+	
+	HWND hWnd;
 
 	HACCEL hAccelTable;
 

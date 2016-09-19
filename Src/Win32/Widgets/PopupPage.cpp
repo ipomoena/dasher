@@ -46,7 +46,10 @@ static menuentry menutable[] = {
 void CPopupPage::PopulateList() {
   // Populate the controls in the dialogue box based on the relevent parameters
   // in m_pDasher
-  
+  //Popup Enabled
+  if (m_pAppSettings->GetBoolParameter(APP_BP_POPUP_ENABLE) == true) {
+	  SendMessage(GetDlgItem(m_hwnd, IDC_POPUP_ENABLE), BM_SETCHECK, BST_CHECKED, 0);
+  }
   
   // TODO: Annoying inversion makes this hard
   if(m_pAppSettings->GetBoolParameter(BP_PALETTE_CHANGE)) {
@@ -109,26 +112,12 @@ void CPopupPage::PopulateList() {
   else if(m_pAppSettings->GetLongParameter(LP_DASHER_FONTSIZE) == Dasher::Opts::VBig) {
     SendMessage(GetDlgItem(m_hwnd, IDC_FONT_VLARGE), BM_SETCHECK, BST_CHECKED, 0);
   }
+
 }
 
 
 bool CPopupPage::Apply() {
 	OutputDebugStringW(L"Popup Prefs:: Apply\n");
-/*
-  for(int ii = 0; ii<sizeof(menutable)/sizeof(menuentry); ii++)
-  {
-    m_pAppSettings->SetBoolParameter(menutable[ii].paramNum, 
-      SendMessage(GetDlgItem(m_hwnd, menutable[ii].idcNum), BM_GETCHECK, 0, 0) == BST_CHECKED );
-  }
-
-  m_pAppSettings->SetLongParameter(LP_OUTLINE_WIDTH,
-	  SendMessage(GetDlgItem(m_hwnd, IDC_OUTLINE), BM_GETCHECK, 0, 0) ? 1 : 0);
-
-  if(SendMessage(GetDlgItem(m_hwnd, IDC_THICKLINE), BM_GETCHECK, 0, 0))
-    m_pAppSettings->SetLongParameter(LP_LINE_WIDTH, 3);
-  else
-    m_pAppSettings->SetLongParameter(LP_LINE_WIDTH, 1);
-
 
   if(m_CurrentColours != std::string("")) {
         m_pAppSettings->SetStringParameter(SP_COLOUR_ID, m_CurrentColours);
@@ -137,7 +126,6 @@ bool CPopupPage::Apply() {
   m_pAppSettings->SetBoolParameter(BP_PALETTE_CHANGE, 
     SendMessage(GetDlgItem(m_hwnd, IDC_COLOURSCHEME), BM_GETCHECK, 0, 0) == BST_UNCHECKED );
 
-*/
   if(SendMessage(GetDlgItem(m_hwnd, IDC_FONT_SMALL), BM_GETCHECK, 0, 0) == BST_CHECKED)
     m_pAppSettings->SetLongParameter(LP_DASHER_FONTSIZE, Dasher::Opts::Normal);
   else if(SendMessage(GetDlgItem(m_hwnd, IDC_FONT_LARGE), BM_GETCHECK, 0, 0) == BST_CHECKED)
@@ -151,7 +139,6 @@ bool CPopupPage::Apply() {
 }
 
 LRESULT CPopupPage::WndProc(HWND Window, UINT message, WPARAM wParam, LPARAM lParam) {
-	OutputDebugStringW(L"Popup Prefs:: WndProc: ");
   // most things we pass on to CPrefsPageBase, but we need to handle slider motion
 	switch (message) {
 
@@ -165,7 +152,6 @@ LRESULT CPopupPage::WndProc(HWND Window, UINT message, WPARAM wParam, LPARAM lPa
 		}
 		switch (LOWORD(wParam)) {
 		case (IDC_COLOURS):
-			OutputDebugStringW(L"Colours\n");
 			if (HIWORD(wParam) == LBN_SELCHANGE) {
 				HWND ListBox = GetDlgItem(m_hwnd, IDC_COLOURS);
 				LRESULT CurrentItem = SendMessage(ListBox, LB_GETCURSEL, 0, 0);
@@ -175,7 +161,6 @@ LRESULT CPopupPage::WndProc(HWND Window, UINT message, WPARAM wParam, LPARAM lPa
 			return TRUE;
 			break;
 		case IDC_DFONT_BUTTON:  // TODO: Put this in a function
-			OutputDebugStringW(L"Font\n");
 			{
 			CHOOSEFONT Data;
 			LOGFONT lf;
@@ -210,7 +195,6 @@ LRESULT CPopupPage::WndProc(HWND Window, UINT message, WPARAM wParam, LPARAM lPa
 			OutputDebugStringW(L"Always On Top\n");
 			break;
 		default:
-			OutputDebugStringW(L"None\n");
 			break;
 
 	}

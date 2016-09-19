@@ -94,8 +94,6 @@ HWND CDasherWindow::Create() {
   m_pAppSettings = new CAppSettings(0, 0, settings);  // Takes ownership of the settings store.
   int iStyle(m_pAppSettings->GetLongParameter(APP_LP_STYLE));
 
-  HWND hWnd;
-
   if (iStyle == APP_STYLE_DIRECT) {
     hWnd = CWindowImpl<CDasherWindow >::Create(NULL, NULL, WindowTitle.c_str(), WS_OVERLAPPEDWINDOW | WS_CLIPCHILDREN, WS_EX_NOACTIVATE | WS_EX_APPWINDOW | WS_EX_TOPMOST);
     ::SetMenu(hWnd, NULL);
@@ -110,12 +108,10 @@ HWND CDasherWindow::Create() {
   m_pEdit->Create(hWnd, m_pAppSettings->GetBoolParameter(APP_BP_TIME_STAMP));
   m_pEdit->SetFont(m_pAppSettings->GetStringParameter(APP_SP_EDIT_FONT), m_pAppSettings->GetLongParameter(APP_LP_EDIT_FONT_SIZE));
 
-  // Create Pop-Out Window
+  // Create Pop-Out Window - for multiple display support
   m_pPopup = new CPopup(m_pAppSettings);
   m_pPopup->Create(hWnd, m_pAppSettings->GetBoolParameter(APP_BP_TIME_STAMP));
   m_pPopup->SetFont(m_pAppSettings->GetStringParameter(APP_SP_POPUP_FONT), m_pAppSettings->GetLongParameter(APP_LP_POPUP_FONT_SIZE));
-
-  ::SetTimer(hWnd, 2, 1270, TIMERPROC(NULL));
 
   m_pDasher = new CDasher(hWnd, this, m_pEdit, m_pPopup, settings, &fileUtils);
 
@@ -169,7 +165,15 @@ void CDasherWindow::Show(int nCmdShow) {
     nCmdShow = SW_MAXIMIZE;
   ShowWindow(nCmdShow);
 }
-
+//This starts a brute force timer to update the popup window display
+void CDasherWindow::configurePopupTimer(bool enable){
+	if (enable) {
+		::SetTimer(hWnd, 2, 1270, TIMERPROC(NULL));
+	}
+	else {
+		::KillTimer(hWnd, 2);
+	}
+}
 void CDasherWindow::HandleParameterChange(int iParameter) {
   switch (iParameter) {
   case APP_BP_SHOW_TOOLBAR:
@@ -384,8 +388,10 @@ LRESULT CDasherWindow::OnOther(UINT message, WPARAM wParam, LPARAM lParam, BOOL&
 
   return 0;
 }
+/* Handles Timer Callbacks*/
 LRESULT CDasherWindow::OnTimer(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled) {
-	//OutputDebugStringW(L"CDasherWindow::Horray!\n");
+	//Brute force timer to update the external display with a copy of the current Dasher edit display
+	//Timer should only be in use (created) by the Popup (when enabled)
 	string currentOutput = m_pEdit->getOutput();
 	m_pPopup->updateDisplay(currentOutput);
 	return false;
@@ -431,7 +437,6 @@ void CDasherWindow::Layout() {
   case APP_STYLE_DIRECT:
     m_pDasher->Move(0, ToolbarHeight, Width, CanvasHeight);
     m_pEdit->ShowWindow(SW_HIDE);
-	//m_pPopup->ShowWindow(SW_HIDE);
     m_pSplitter->ShowWindow(SW_HIDE);
     break;
 
@@ -446,7 +451,7 @@ void CDasherWindow::Layout() {
       m_pEdit->Move(Width / 2, ToolbarHeight, Width - Width / 2, CanvasHeight);
     }
     m_pEdit->ShowWindow(SW_SHOW);
-	//m_pPopup->ShowWindow(SW_SHOW);
+	m_pPopup->HandleParameterChange(APP_BP_POPUP_ENABLE); //Checks configuration and shows if enabled
     m_pSplitter->ShowWindow(SW_HIDE);
     break;
 
@@ -478,7 +483,7 @@ void CDasherWindow::Layout() {
       m_pSplitter->Move(SplitterY, Width);
     }
     m_pEdit->ShowWindow(SW_SHOW);
-	m_pEdit->ShowWindow(SW_SHOW);
+	m_pPopup->HandleParameterChange(APP_BP_POPUP_ENABLE); //Checks configuration and shows if enabled
     m_pSplitter->ShowWindow(SW_SHOW);
     if (m_bSizeRestored)
       m_pAppSettings->SetLongParameter(APP_LP_EDIT_SIZE, EditHeight);

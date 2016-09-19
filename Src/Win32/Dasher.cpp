@@ -117,13 +117,11 @@ void Dasher::CDasher::HandleEvent(int iParameter) {
 
 void Dasher::CDasher::editOutput(const string &strText, CDasherNode *pSource) {
   m_pEdit->output(strText);
-  m_pPopup->output(strText);
   CDasherInterfaceBase::editOutput(strText, pSource);
 }
 
 void Dasher::CDasher::editDelete(const string &strText, CDasherNode *pSource) {
   m_pEdit->deletetext(strText);
-  m_pPopup->deletetext(strText);
   CDasherInterfaceBase::editDelete(strText, pSource);
 }
 
@@ -353,4 +351,9 @@ int CDasher::GetAllContextLenght(){
 
 std::string CDasher::GetTextAroundCursor(CControlManager::EditDistance iDist) {
   return m_pEdit->GetTextAroundCursor(iDist);
+}
+
+void CDasher::configurePopupTimer(bool enable) {
+	//Timer is managed by the window object
+	m_pWindow->configurePopupTimer(enable);
 }

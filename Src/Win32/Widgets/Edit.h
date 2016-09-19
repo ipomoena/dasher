@@ -112,7 +112,7 @@ class CEdit : public ATL::CWindowImpl<CEdit> {
   //ACL Making these public so can be called directly from CDasher
   void HandleParameterChange(int iParameter);
 
-  //Expose current text
+  //Expose current text- Used by the Popup Window to update external display window
   std::string getOutput();
 
  protected:
