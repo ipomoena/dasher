@@ -41,7 +41,10 @@ SToolbarButton sButtons[] = {
   {-2, 5, IDS_EDIT_COPY_ALL, ID_EDIT_COPY_ALL},
   {STD_PASTE, 6, IDS_EDIT_PASTE, ID_EDIT_PASTE},
   {-1, -1, 0, 0},
-  {STD_PROPERTIES, 7, IDS_OPTIONS_PREFS, ID_OPTIONS_PREFS}
+  {STD_PROPERTIES, 7, IDS_OPTIONS_PREFS, ID_OPTIONS_PREFS},
+  { -1, -1, 0, 0 },
+  //External Display
+  { STD_PRINTPRE, 8, IDC_POPUP_QUICK, ID_QUICK_POPUP },
 };
 
 CToolbar::CToolbar(HWND hParent, bool bVisible) {
@@ -67,9 +70,7 @@ void CToolbar::ShowToolbar(bool bValue) {
 
 void CToolbar::CreateToolbar() {
   WinHelper::InitCommonControlLib();
-
- 
-
+  
   m_hRebar = CreateWindowEx(WS_EX_TOOLWINDOW,
                             REBARCLASSNAME,
                             NULL,
