@@ -98,6 +98,10 @@
 #define IDC_SPEED_EDIT                  1165
 #define IDC_SPEED_SPIN                  1166
 #define IDC_ALPHABET_COMBO              1167
+
+#define IDC_POPUP_QUICK					1170
+#define ID_QUICK_POPUP					1171
+
 #define ID_EDIT_SELECTALL               32775
 #define ID_HELP_CONTENTS                32776
 #define ID_EDIT_COPY_ALL                32798

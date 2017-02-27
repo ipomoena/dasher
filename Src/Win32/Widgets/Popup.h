@@ -63,13 +63,6 @@ class CPopup : public ATL::CWindowImpl<CPopup> {
   END_MSG_MAP()
 
   void Move(int x, int y, int Width, int Height);
-
-  unsigned int OffsetAfterMove(unsigned int offsetBefore, bool bForwards,  Dasher::CControlManager::EditDistance iDist);
-  int Move(bool bForwards, Dasher::CControlManager::EditDistance iDist);
-  int Delete(bool bForwards, Dasher::CControlManager::EditDistance iDist);
-  std::string GetTextAroundCursor(Dasher::CControlManager::EditDistance iDist);
-
-  void SetKeyboardTarget(HWND hwnd);
   
   void SetFont(std::string Name, long Size);
   
@@ -80,11 +73,11 @@ class CPopup : public ATL::CWindowImpl<CPopup> {
 
   void updateDisplay(const std::string sText);
   
-  // remove the previous character: called when we steer/reverse the crosshair out of a node
-  void deletetext(const std::string & sText);
-
   //ACL Making these public so can be called directly from CDasher
   void HandleParameterChange(int iParameter);
+  
+  //Called when the quick enable button is pressed in the toolbar
+  bool processToolbarButtonPress();
 
  protected:
   bool m_dirty;

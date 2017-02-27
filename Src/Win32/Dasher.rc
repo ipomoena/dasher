@@ -507,6 +507,12 @@ BEGIN
     IDS_ERR_SOCKET_TITLE    "Dasher Socket Input error"
 END
 
+STRINGTABLE
+BEGIN
+	IDC_POPUP_QUICK			"Popup"
+END
+
+
 #endif    // English (United Kingdom) resources
 /////////////////////////////////////////////////////////////////////////////
 
