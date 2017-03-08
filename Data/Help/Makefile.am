@@ -5,5 +5,5 @@ if GNOME_HELP
 endif
 
 EXTRA_DIST = \
-		Manual.vcproj \
+		Manual.vcxproj \
 		compile_help.cmd

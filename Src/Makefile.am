@@ -1,5 +1,3 @@
-LIBS = @INTLLIBS@ @LIBS@
-
 datadir = @datadir@
 localedir = $(datadir)/locale
 DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@

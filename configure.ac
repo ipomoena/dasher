@@ -22,24 +22,10 @@ AC_CONFIG_LIBOBJ_DIR([Src/Common])
 AM_INIT_AUTOMAKE([1.8 gnu check-news dist-bzip2 subdir-objects])
 AM_MAINTAINER_MODE
 
-AC_PROG_MAKE_SET
-
-# IT_PROG_INTLTOOL requires AM_NLS but ignores --enable-nls
-AM_NLS
-AM_CONDITIONAL(USE_INTLTOOL, test "x$USE_NLS" = "xyes")
-AS_IF([test "x$USE_NLS" = "xyes"],[
-IT_PROG_INTLTOOL([0.40.1])
-],
-[touch po/Makefile.in.in]) dnl as intltoolize insists
-
 LT_INIT([disable-static])
 
-dnl AM_ICONV
-
-GETTEXT_PACKAGE=dasher
-AC_SUBST(GETTEXT_PACKAGE)
-AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE", [Gettext package])
-AM_GLIB_GNU_GETTEXT
+AM_GNU_GETTEXT_VERSION([0.19])
+AM_GNU_GETTEXT([external])
 
 CXXFLAGS="$CXXFLAGS -std=c++0x"
 AC_PROG_CXX
@@ -402,8 +388,6 @@ AC_SUBST(gthread_CFLAGS)
 
 AC_SUBST(hildon_LIBS)
 AC_SUBST(hildon_CFLAGS)
-
-AC_SUBST(GETTEXT_PACKAGE)
 
 AM_CONDITIONAL(DOGTK, test x$BUILDGTK = xtrue)
 AM_CONDITIONAL(DOQTE, test x$WITHQTE = xtrue)

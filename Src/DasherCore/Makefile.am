@@ -161,7 +161,4 @@ AM_CXXFLAGS = -I$(srcdir)
 EXTRA_DIST = \
 		LanguageModelling/KanjiConversionIME.cpp \
 		LanguageModelling/KanjiConversionIME.h \
-		DasherCore.vcproj \
-		DasherCore_vc80.vcproj \
-		IMEConversionHelper.cpp \
-		IMEConversionHelper.h 
+		DasherCore.vcxproj

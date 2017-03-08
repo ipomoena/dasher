@@ -170,7 +170,7 @@ int main(int argc, char *argv[]) {
   //parse command line options
   // Note to translators: This is the "--help" description of dasher.
   GOptionContext *goptcontext = g_option_context_new(_("- A text input application honouring accessibility"));
-  g_option_context_add_main_entries(goptcontext, options, GETTEXT_PACKAGE);
+  g_option_context_add_main_entries(goptcontext, options, PACKAGE);
   g_option_context_add_group(goptcontext, gtk_get_option_group(TRUE));
   GError *error = nullptr;
   if (!g_option_context_parse(goptcontext, &argc, &argv, &error)) {

@@ -2,11 +2,11 @@
 # Please keep this file sorted alphabetically.
 # Use "make check" to check for missing files:
 Data/dasher.desktop.in.in
-[type: gettext/glade]Data/GUI/dashermaemofullscreen.ui
-[type: gettext/glade]Data/GUI/dashermaemo.preferences.ui
-[type: gettext/glade]Data/GUI/dashermaemo.ui
-[type: gettext/glade]Data/GUI/dasher.preferences.ui
-[type: gettext/glade]Data/GUI/dasher.traditional.ui
+Data/GUI/dashermaemofullscreen.ui
+Data/GUI/dashermaemo.preferences.ui
+Data/GUI/dashermaemo.ui
+Data/GUI/dasher.preferences.ui
+Data/GUI/dasher.traditional.ui
 Src/DasherCore/AbstractXMLParser.cpp
 Src/DasherCore/Alphabet/AlphabetMap.cpp
 Src/DasherCore/AlphabetManager.cpp

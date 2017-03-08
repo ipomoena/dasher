@@ -21,12 +21,9 @@ stamp-*
 /config.log
 /config.status
 /configure
-/intltool-extract.in
-/intltool-merge.in
-/intltool-update.in
 /libtool
-/po/.intltool-merge-cache
 /po/Makefile.in.in
+/po/Makevars.template
 /po/POTFILES
 /Data/dasher.desktop
 /Data/dasher.desktop.in
@@ -48,3 +45,14 @@ Src/Win32/Dasher_vc2013.VC.db
 Data/Help/Win32/Dasher.chm
 Src/Win32/Dasher.VC.db
 *.opendb
+
+Src/DasherCore/.dirstamp
+Src/DasherCore/.deps/
+Src/DasherCore/Alphabet/.deps/
+Src/DasherCore/Alphabet/.dirstamp
+
+
+# Eclipse
+.autotools
+.cproject
+.project

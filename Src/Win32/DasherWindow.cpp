@@ -447,11 +447,11 @@ void CDasherWindow::Layout() {
   case APP_STYLE_COMPOSE:
     if (mirrorLayout)
     {
-      m_pDasher->Move(Width / 2, ToolbarHeight, Width - Width / 2, CanvasHeight);
+      m_pDasher->Move(Width / 2, ToolbarHeight, Width - Width / 2 - 1, CanvasHeight - 1);
       m_pEdit->Move(0, ToolbarHeight, Width / 2, CanvasHeight);
     }
     else {
-      m_pDasher->Move(0, ToolbarHeight, Width / 2, CanvasHeight);
+      m_pDasher->Move(1, ToolbarHeight, Width / 2 - 1, CanvasHeight - 1);
       m_pEdit->Move(Width / 2, ToolbarHeight, Width - Width / 2, CanvasHeight);
     }
     m_pEdit->ShowWindow(SW_SHOW);
@@ -471,7 +471,7 @@ void CDasherWindow::Layout() {
       SplitterY = min(SplitterY, ToolbarHeight + CanvasHeight - GetMinEditHeight() - SplitterHeight);
       SplitterY = max(ToolbarHeight + GetMinCanvasHeight(), SplitterY);
       EditHeight = ToolbarHeight + CanvasHeight - SplitterY - SplitterHeight;
-      m_pDasher->Move(0, ToolbarHeight, Width, SplitterY - ToolbarHeight);
+      m_pDasher->Move(1, ToolbarHeight, Width - 2, SplitterY - ToolbarHeight);
       m_pSplitter->Move(SplitterY, Width);
       m_pEdit->Move(0, SplitterY + SplitterHeight, Width, EditHeight);
     }
@@ -482,7 +482,7 @@ void CDasherWindow::Layout() {
       SplitterY = min(SplitterY, ToolbarHeight + CanvasHeight - GetMinCanvasHeight() - SplitterHeight);
       SplitterY = max(ToolbarHeight + GetMinEditHeight(), SplitterY);
       EditHeight = SplitterY - ToolbarHeight;
-      m_pDasher->Move(0, SplitterY + SplitterHeight, Width, ToolbarHeight + CanvasHeight - SplitterY - SplitterHeight);
+      m_pDasher->Move(1, SplitterY + SplitterHeight, Width - 2, ToolbarHeight + CanvasHeight - SplitterY - SplitterHeight - 1);
       m_pEdit->Move(0, ToolbarHeight, Width, EditHeight);
       m_pSplitter->Move(SplitterY, Width);
     }

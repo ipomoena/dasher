@@ -11,244 +11,237 @@ msgstr ""
 "Project-Id-Version: dasher master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=dasher&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-04 16:23+0000\n"
-"PO-Revision-Date: 2016-03-04 22:08+0100\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"POT-Creation-Date: 2016-09-01 16:47+0000\n"
+"PO-Revision-Date: 2016-09-01 20:34+0200\n"
+"Last-Translator: Meskó Balázs <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Note to translators: This is the name of the dasher program as it appears
 #. in a window title.
-#: ../Data/dasher.desktop.in.in.h:1 ../Data/GUI/dashermaemofullscreen.ui.h:14
-#: ../Data/GUI/dashermaemo.ui.h:1 ../Data/GUI/dasher.traditional.ui.h:23
-#: ../Src/Gtk2/dasher_main.cpp:867
+#: Data/dasher.desktop.in.in:3 Data/GUI/dashermaemofullscreen.ui:174
+#: Data/GUI/dashermaemo.ui:7 Data/GUI/dasher.traditional.ui:196
+#: Src/Gtk2/dasher_main.cpp:867
 msgid "Dasher"
 msgstr "Dasher"
 
-#: ../Data/dasher.desktop.in.in.h:2
+#: Data/dasher.desktop.in.in:4
 msgid "Predictive text entry"
 msgstr "Prediktív szövegbevitel"
 
-#: ../Data/dasher.desktop.in.in.h:3
+#: Data/dasher.desktop.in.in:5
 msgid "Enter text without a keyboard"
 msgstr "Szövegbevitel billentyűzet nélkül"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:1
-#: ../Data/GUI/dasher.traditional.ui.h:1
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: Data/dasher.desktop.in.in:8
+#| msgid "Dasher"
+msgid "dasher"
+msgstr "dasher"
+
+#: Data/GUI/dashermaemofullscreen.ui:10 Data/GUI/dasher.traditional.ui:17
 msgid "_File"
 msgstr "_Fájl"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:2
-#: ../Data/GUI/dasher.traditional.ui.h:9
+#: Data/GUI/dashermaemofullscreen.ui:30 Data/GUI/dasher.traditional.ui:71
 msgid "_Edit"
 msgstr "S_zerkesztés"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:3
-#: ../Data/GUI/dasher.traditional.ui.h:12
+#: Data/GUI/dashermaemofullscreen.ui:57 Data/GUI/dasher.traditional.ui:90
 msgid "Copy _All"
 msgstr "Mi_ndent másol"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:4
+#: Data/GUI/dashermaemofullscreen.ui:64
 msgid "_Options"
 msgstr "_Beállítások"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:5
+#: Data/GUI/dashermaemofullscreen.ui:77
 msgid "_Edit Font"
 msgstr "Betűkészlet s_zerkesztése"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:6
+#: Data/GUI/dashermaemofullscreen.ui:84
 msgid "_Dasher Font"
 msgstr "_Dasher betűkészlet"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:7
+#: Data/GUI/dashermaemofullscreen.ui:91
 msgid "_Dasher Font Size"
 msgstr "_Dasher betűméret"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:8
+#: Data/GUI/dashermaemofullscreen.ui:98
 msgid "Normal"
 msgstr "Normál"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:9
+#: Data/GUI/dashermaemofullscreen.ui:107
 msgid "Large"
 msgstr "Nagy"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:10
+#: Data/GUI/dashermaemofullscreen.ui:116
 msgid "Very Large"
 msgstr "Nagyon nagy"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:11
+#: Data/GUI/dashermaemofullscreen.ui:123
 msgid "_Reset fonts"
 msgstr "Betűkészletek _visszaállítása"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:12
-#: ../Data/GUI/dasher.traditional.ui.h:16
+#: Data/GUI/dashermaemofullscreen.ui:130 Data/GUI/dasher.traditional.ui:112
 msgid "_Help"
 msgstr "_Súgó"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:13
+#: Data/GUI/dashermaemofullscreen.ui:136
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:15 ../Data/GUI/dashermaemo.ui.h:4
-#: ../Src/Gtk2/dasher_editor.cpp:809 ../Src/Gtk2/dasher_editor.cpp:843
-#: ../Src/Gtk2/dasher_main.cpp:882
+#: Data/GUI/dashermaemofullscreen.ui:277 Data/GUI/dashermaemofullscreen.ui:441
+#: Data/GUI/dashermaemofullscreen.ui:477 Data/GUI/dashermaemofullscreen.ui:513
+#: Data/GUI/dashermaemofullscreen.ui:549 Data/GUI/dashermaemo.ui:255
+#: Data/GUI/dashermaemo.ui:419 Data/GUI/dashermaemo.ui:455
+#: Data/GUI/dashermaemo.ui:491 Data/GUI/dashermaemo.ui:527
+#: Src/Gtk2/dasher_editor.cpp:809 Src/Gtk2/dasher_editor.cpp:843
+#: Src/Gtk2/dasher_main.cpp:882
 msgid "Select File"
 msgstr "Fájl kiválasztása"
 
-#: ../Data/GUI/dashermaemofullscreen.ui.h:16 ../Data/GUI/dashermaemo.ui.h:5
+#: Data/GUI/dashermaemofullscreen.ui:313 Data/GUI/dashermaemofullscreen.ui:377
+#: Data/GUI/dashermaemo.ui:291 Data/GUI/dashermaemo.ui:355
 msgid "Select Font"
 msgstr "Betűkészlet kiválasztása"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:1
-#: ../Data/GUI/dasher.preferences.ui.h:3
+#: Data/GUI/dashermaemo.preferences.ui:21 Data/GUI/dasher.preferences.ui:34
 msgid "Dasher Preferences"
 msgstr "Dasher beállításai"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:2
-#: ../Data/GUI/dasher.preferences.ui.h:4
+#: Data/GUI/dashermaemo.preferences.ui:48 Data/GUI/dasher.preferences.ui:58
 msgid "Alphabet Selection"
 msgstr "Ábécéválasztás"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:3
+#: Data/GUI/dashermaemo.preferences.ui:109
 msgid "Color Scheme"
 msgstr "Színséma"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:4
-#: ../Data/GUI/dasher.preferences.ui.h:42
+#: Data/GUI/dashermaemo.preferences.ui:132 Data/GUI/dasher.preferences.ui:846
 msgid "Custom colour scheme:"
 msgstr "Egyéni színséma:"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:5
+#: Data/GUI/dashermaemo.preferences.ui:180
 msgid "Alphabet"
 msgstr "Ábécé"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:6
-#: ../Data/GUI/dasher.preferences.ui.h:32
+#: Data/GUI/dashermaemo.preferences.ui:200 Data/GUI/dasher.preferences.ui:615
 msgid "Speed"
 msgstr "Sebesség"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:7
-#: ../Data/GUI/dasher.preferences.ui.h:33
+#: Data/GUI/dashermaemo.preferences.ui:224 Data/GUI/dasher.preferences.ui:645
 msgid "Adapt speed automatically"
 msgstr "Sebesség automatikus igazítása"
 
 #. The way in which you would like to control dasher, e.g., using buttons for up/down, buttons for select, etc.
-#: ../Data/GUI/dashermaemo.preferences.ui.h:9
+#: Data/GUI/dashermaemo.preferences.ui:261
 msgid "Control"
 msgstr "Vezérlőelem"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:10
+#: Data/GUI/dashermaemo.preferences.ui:285
 msgid "Display Size"
 msgstr "Megjelenítő mérete"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:11
+#: Data/GUI/dashermaemo.preferences.ui:307
 msgid "Enlarge input window"
 msgstr "Bemeneti ablak növelése"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:12
+#: Data/GUI/dashermaemo.preferences.ui:338
 msgid "Orientation"
 msgstr "Tájolás"
 
 #. The default display orientation for the selected alphabet, i.e., left to right for English, right to left for Arabic, etc.
-#: ../Data/GUI/dashermaemo.preferences.ui.h:13
-#: ../Data/GUI/dasher.preferences.ui.h:21
+#: Data/GUI/dashermaemo.preferences.ui:360 Data/GUI/dasher.preferences.ui:344
 msgid "Alphabet Default"
 msgstr "Alapértelmezett ábécé"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:14
+#: Data/GUI/dashermaemo.preferences.ui:375
 msgid "Custom"
 msgstr "Egyéni"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:15
+#: Data/GUI/dashermaemo.preferences.ui:399
 msgid "Left to Right"
 msgstr "Balról jobbra"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:16
+#: Data/GUI/dashermaemo.preferences.ui:414
 msgid "Right to Left"
 msgstr "Jobbról balra"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:17
+#: Data/GUI/dashermaemo.preferences.ui:431
 msgid "Top to Bottom"
 msgstr "Fentről lefelé"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:18
+#: Data/GUI/dashermaemo.preferences.ui:448
 msgid "Bottom to Top"
 msgstr "Lentről felfelé"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:19
+#: Data/GUI/dashermaemo.preferences.ui:487
 msgid "View"
 msgstr "Nézet"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:20
-#: ../Data/GUI/dasher.preferences.ui.h:5
+#: Data/GUI/dashermaemo.preferences.ui:506 Data/GUI/dasher.preferences.ui:107
 msgid "Language Model"
 msgstr "Nyelvmodell"
 
 #. PPM = Prediction by Partial Match, a statistical language model.
-#: ../Data/GUI/dashermaemo.preferences.ui.h:21
-#: ../Data/GUI/dasher.preferences.ui.h:7
+#: Data/GUI/dashermaemo.preferences.ui:530 Data/GUI/dasher.preferences.ui:128
 msgid "Standard letter-based PPM"
 msgstr "Szabvány betűalapú PPM"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:22
-#: ../Data/GUI/dasher.preferences.ui.h:8
+#: Data/GUI/dashermaemo.preferences.ui:544 Data/GUI/dasher.preferences.ui:142
 msgid "Word-based model"
 msgstr "Szóalapú modell"
 
 #. PPM = Prediction by Partial Match, a statistical language model.
-#: ../Data/GUI/dashermaemo.preferences.ui.h:23
-#: ../Data/GUI/dasher.preferences.ui.h:10
+#: Data/GUI/dashermaemo.preferences.ui:560 Data/GUI/dasher.preferences.ui:158
 msgid "Mixture model (PPM/dictionary)"
 msgstr "Keverési modell (PPM/szótár)"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:24
-#: ../Data/GUI/dasher.preferences.ui.h:11
+#: Data/GUI/dashermaemo.preferences.ui:576 Data/GUI/dasher.preferences.ui:174
 msgid "Japanese"
 msgstr "Japán"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:25
-#: ../Data/GUI/dasher.preferences.ui.h:12
+#: Data/GUI/dashermaemo.preferences.ui:609 Data/GUI/dasher.preferences.ui:205
 msgid "Adaptation"
 msgstr "Alkalmazkodás"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:26
-#: ../Data/GUI/dasher.preferences.ui.h:13
+#: Data/GUI/dashermaemo.preferences.ui:634 Data/GUI/dasher.preferences.ui:226
 msgid "Language model adapts as you write."
 msgstr "A nyelvmodell alkalmazkodik írás közben."
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:27
-#: ../Data/GUI/dasher.preferences.ui.h:14
+#: Data/GUI/dashermaemo.preferences.ui:666 Data/GUI/dasher.preferences.ui:257
 msgid "Smoothing"
 msgstr "Simítás"
 
-#: ../Data/GUI/dashermaemo.preferences.ui.h:28
+#: Data/GUI/dashermaemo.preferences.ui:717
 msgid "Prediction"
 msgstr "Előrejelzés"
 
 #. Abbreviation for Preferences
-#: ../Data/GUI/dashermaemo.ui.h:3
+#: Data/GUI/dashermaemo.ui:66
 msgid "P"
 msgstr "P"
 
-#: ../Data/GUI/dashermaemo.ui.h:6 ../Data/GUI/dasher.traditional.ui.h:26
+#: Data/GUI/dashermaemo.ui:563 Data/GUI/dasher.traditional.ui:392
 msgid "Please Wait…"
 msgstr "Kis türelmet…"
 
-#: ../Data/GUI/dasher.preferences.ui.h:1
+#: Data/GUI/dasher.preferences.ui:26
 msgid "Centre circle"
 msgstr "Középső kör"
 
-#: ../Data/GUI/dasher.preferences.ui.h:2
+#: Data/GUI/dasher.preferences.ui:29
 msgid "Two box"
 msgstr "Két négyzet"
 
 #. Line wrapping not necessary, but looks better for English
-#: ../Data/GUI/dasher.preferences.ui.h:16
+#: Data/GUI/dasher.preferences.ui:280
 msgid ""
 "Use this control to adjust the relative sizes of the\n"
 "letter boxes. Note that selecting high values will slow\n"
@@ -258,271 +251,271 @@ msgstr ""
 "módosításához. Ne feledje, hogy a magas értékek kiválasztása\n"
 "csökkenteni fogja az írási sebességet."
 
-#: ../Data/GUI/dasher.preferences.ui.h:19
+#: Data/GUI/dasher.preferences.ui:322
 msgid "Direction"
 msgstr "Irány"
 
 #. This means that you always want to write left-to-right regardless of the normal direction for the alphabet you are using
-#: ../Data/GUI/dasher.preferences.ui.h:23
+#: Data/GUI/dasher.preferences.ui:359
 msgid "Always Left-to-Right"
 msgstr "Mindig balról jobbra"
 
-#: ../Data/GUI/dasher.preferences.ui.h:24
+#: Data/GUI/dasher.preferences.ui:376
 msgid "Always Right-to-Left"
 msgstr "Mindig jobbról balra"
 
-#: ../Data/GUI/dasher.preferences.ui.h:25
+#: Data/GUI/dasher.preferences.ui:393
 msgid "Always Top-to-Bottom"
 msgstr "Mindig fentről lefelé"
 
-#: ../Data/GUI/dasher.preferences.ui.h:26
+#: Data/GUI/dasher.preferences.ui:410
 msgid "Always Bottom-to-Top"
 msgstr "Mindig lentről felfelé"
 
-#: ../Data/GUI/dasher.preferences.ui.h:27
+#: Data/GUI/dasher.preferences.ui:444
 msgid "_Language"
 msgstr "_Nyelv"
 
 #. The way in which you would like to control dasher, e.g., using buttons for up/down, buttons for select, etc.
-#: ../Data/GUI/dasher.preferences.ui.h:29
+#: Data/GUI/dasher.preferences.ui:463
 msgid "Control Style"
 msgstr "Vezérlőelem stílusa"
 
-#: ../Data/GUI/dasher.preferences.ui.h:30
+#: Data/GUI/dasher.preferences.ui:510 Data/GUI/dasher.preferences.ui:588
 msgid "Options"
 msgstr "Beállítások"
 
-#: ../Data/GUI/dasher.preferences.ui.h:31
+#: Data/GUI/dasher.preferences.ui:541
 msgid "Input Device"
 msgstr "Beviteli eszköz"
 
-#: ../Data/GUI/dasher.preferences.ui.h:34
+#: Data/GUI/dasher.preferences.ui:677
 msgid "Starting and Stopping"
 msgstr "Indítás és leállítás"
 
-#: ../Data/GUI/dasher.preferences.ui.h:35
+#: Data/GUI/dasher.preferences.ui:699
 msgid "Start on left mouse button"
 msgstr "Indulás bal egérgombra"
 
-#: ../Data/GUI/dasher.preferences.ui.h:36
+#: Data/GUI/dasher.preferences.ui:714
 msgid "Start on space bar"
 msgstr "Indulás szóközre"
 
-#: ../Data/GUI/dasher.preferences.ui.h:37
+#: Data/GUI/dasher.preferences.ui:730
 msgid "Start with mouse position:"
 msgstr "Indulás ezen egérpozícióval:"
 
-#: ../Data/GUI/dasher.preferences.ui.h:38
+#: Data/GUI/dasher.preferences.ui:771
 msgid "Pause outside of canvas"
 msgstr "Vásznon kívüli szünet"
 
 #. Abbreviation for Control Style
-#: ../Data/GUI/dasher.preferences.ui.h:40
+#: Data/GUI/dasher.preferences.ui:805
 msgid "C_ontrol"
 msgstr "_Vezérlőelem"
 
-#: ../Data/GUI/dasher.preferences.ui.h:41
+#: Data/GUI/dasher.preferences.ui:825
 msgid "Colour Scheme"
 msgstr "Színséma"
 
-#: ../Data/GUI/dasher.preferences.ui.h:43
+#: Data/GUI/dasher.preferences.ui:898
 msgid "Appearance Options"
 msgstr "Megjelenés beállításai"
 
-#: ../Data/GUI/dasher.preferences.ui.h:44
+#: Data/GUI/dasher.preferences.ui:920
 msgid "Show mouse position"
 msgstr "Egér pozíciójának megjelenítése"
 
-#: ../Data/GUI/dasher.preferences.ui.h:45
+#: Data/GUI/dasher.preferences.ui:935
 msgid "Draw line between crosshairs and mouse"
 msgstr "Vonal rajzolása a célkeresztek és az egér közé"
 
-#: ../Data/GUI/dasher.preferences.ui.h:46
+#: Data/GUI/dasher.preferences.ui:955
 msgid "Increase line thickness"
 msgstr "A vonal vastagságának növelése"
 
-#: ../Data/GUI/dasher.preferences.ui.h:47
+#: Data/GUI/dasher.preferences.ui:973
 msgid "Draw box outlines"
 msgstr "Dobozkörvonalak rajzolása"
 
-#: ../Data/GUI/dasher.preferences.ui.h:48
+#: Data/GUI/dasher.preferences.ui:1003
 msgid "Dasher Font"
 msgstr "Dasher betűkészlete"
 
-#: ../Data/GUI/dasher.preferences.ui.h:49
+#: Data/GUI/dasher.preferences.ui:1024
 msgid "Select Dasher Font"
 msgstr "A Dasher betűkészletének kiválasztása"
 
-#: ../Data/GUI/dasher.preferences.ui.h:50
+#: Data/GUI/dasher.preferences.ui:1039
 msgid "Small font"
 msgstr "Kis betűkészlet"
 
-#: ../Data/GUI/dasher.preferences.ui.h:51
+#: Data/GUI/dasher.preferences.ui:1055
 msgid "Large font "
 msgstr "Nagy betűkészlet "
 
-#: ../Data/GUI/dasher.preferences.ui.h:52
+#: Data/GUI/dasher.preferences.ui:1072
 msgid "Very large font"
 msgstr "Nagyon nagy betűkészlet"
 
-#: ../Data/GUI/dasher.preferences.ui.h:53
+#: Data/GUI/dasher.preferences.ui:1107
 msgid "_Appearance"
 msgstr "_Megjelenés"
 
-#: ../Data/GUI/dasher.preferences.ui.h:54
+#: Data/GUI/dasher.preferences.ui:1135
 msgid "Application Options"
 msgstr "Alkalmazás beállításai"
 
-#: ../Data/GUI/dasher.preferences.ui.h:55
+#: Data/GUI/dasher.preferences.ui:1157
 msgid "Timestamp new files"
 msgstr "Új fájlok időbélyegzése"
 
-#: ../Data/GUI/dasher.preferences.ui.h:56
+#: Data/GUI/dasher.preferences.ui:1172
 msgid "Show toolbar"
 msgstr "Eszköztár megjelenítése"
 
-#: ../Data/GUI/dasher.preferences.ui.h:57
+#: Data/GUI/dasher.preferences.ui:1188
 msgid "Show speed slider"
 msgstr "Sebességcsúszka megjelenítése"
 
-#: ../Data/GUI/dasher.preferences.ui.h:58
+#: Data/GUI/dasher.preferences.ui:1204
 msgid "Control mode"
 msgstr "Vezérlőelem mód"
 
-#: ../Data/GUI/dasher.preferences.ui.h:59
+#: Data/GUI/dasher.preferences.ui:1235
 msgid "Copy All on stop"
 msgstr "Összes másolása leállításkor"
 
-#: ../Data/GUI/dasher.preferences.ui.h:60
+#: Data/GUI/dasher.preferences.ui:1251
 msgid "Speak All on stop"
 msgstr "Összes felolvasása leállításkor"
 
-#: ../Data/GUI/dasher.preferences.ui.h:61
+#: Data/GUI/dasher.preferences.ui:1267
 msgid "Speak words as you write"
 msgstr "Szavak felolvasása írás közben"
 
-#: ../Data/GUI/dasher.preferences.ui.h:62
+#: Data/GUI/dasher.preferences.ui:1297
 msgid "Editor Font"
 msgstr "Szerkesztő betűkészlete"
 
-#: ../Data/GUI/dasher.preferences.ui.h:63
+#: Data/GUI/dasher.preferences.ui:1315
 msgid "Select Editor Font"
 msgstr "Szerkesztő betűkészletének kiválasztása"
 
-#: ../Data/GUI/dasher.preferences.ui.h:64
+#: Data/GUI/dasher.preferences.ui:1343
 msgid "Application Style"
 msgstr "Alkalmazás stílusa"
 
-#: ../Data/GUI/dasher.preferences.ui.h:65
+#: Data/GUI/dasher.preferences.ui:1365
 msgid "Stand-alone"
 msgstr "Önálló"
 
-#: ../Data/GUI/dasher.preferences.ui.h:66
+#: Data/GUI/dasher.preferences.ui:1380
 msgid "Composition"
 msgstr "Kompozíció"
 
-#: ../Data/GUI/dasher.preferences.ui.h:67
+#: Data/GUI/dasher.preferences.ui:1397
 msgid "Direct entry"
 msgstr "Közvetlen bevitel"
 
-#: ../Data/GUI/dasher.preferences.ui.h:68
+#: Data/GUI/dasher.preferences.ui:1414
 msgid "Full Screen"
 msgstr "Teljes képernyő"
 
-#: ../Data/GUI/dasher.preferences.ui.h:69
+#: Data/GUI/dasher.preferences.ui:1454
 msgid "A_pplication"
 msgstr "_Alkalmazás"
 
-#: ../Data/GUI/dasher.traditional.ui.h:2
+#: Data/GUI/dasher.traditional.ui:23
 msgid "New file"
 msgstr "Új fájl"
 
-#: ../Data/GUI/dasher.traditional.ui.h:3
+#: Data/GUI/dasher.traditional.ui:30
 msgid "Open file"
 msgstr "Fájl megnyitása"
 
-#: ../Data/GUI/dasher.traditional.ui.h:4
+#: Data/GUI/dasher.traditional.ui:37
 msgid "Save file"
 msgstr "Fájl mentése"
 
-#: ../Data/GUI/dasher.traditional.ui.h:5
+#: Data/GUI/dasher.traditional.ui:44
 msgid "Save file as"
 msgstr "Fájl mentése másként"
 
-#: ../Data/GUI/dasher.traditional.ui.h:6
+#: Data/GUI/dasher.traditional.ui:51
 msgid "A_ppend to file…"
 msgstr "_Hozzáfűzés fájlhoz…"
 
-#: ../Data/GUI/dasher.traditional.ui.h:7
+#: Data/GUI/dasher.traditional.ui:58
 msgid "_Import Training Text…"
 msgstr "Gyakorlószöveg _importálása…"
 
-#: ../Data/GUI/dasher.traditional.ui.h:8 ../Src/Gtk2/dasher_main.cpp:960
+#: Data/GUI/dasher.traditional.ui:65 Src/Gtk2/dasher_main.cpp:960
 msgid "Quit"
 msgstr "Kilépés"
 
-#: ../Data/GUI/dasher.traditional.ui.h:10
+#: Data/GUI/dasher.traditional.ui:77
 msgid "Cut"
 msgstr "Kivágás"
 
-#: ../Data/GUI/dasher.traditional.ui.h:11
+#: Data/GUI/dasher.traditional.ui:84
 msgid "Copy"
 msgstr "Másolás"
 
-#: ../Data/GUI/dasher.traditional.ui.h:13
+#: Data/GUI/dasher.traditional.ui:97
 msgid "Paste"
 msgstr "Beillesztés"
 
-#: ../Data/GUI/dasher.traditional.ui.h:14
+#: Data/GUI/dasher.traditional.ui:104
 msgid "Pr_eferences…"
 msgstr "_Beállítások…"
 
-#: ../Data/GUI/dasher.traditional.ui.h:15
+#: Data/GUI/dasher.traditional.ui:105
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: ../Data/GUI/dasher.traditional.ui.h:17
+#: Data/GUI/dasher.traditional.ui:118
 msgid "_Contents…"
 msgstr "_Tartalom…"
 
-#: ../Data/GUI/dasher.traditional.ui.h:18
+#: Data/GUI/dasher.traditional.ui:119
 msgid "Help"
 msgstr "Súgó"
 
-#: ../Data/GUI/dasher.traditional.ui.h:19
+#: Data/GUI/dasher.traditional.ui:127
 msgid "_About…"
 msgstr "_Névjegy…"
 
-#: ../Data/GUI/dasher.traditional.ui.h:20
-#: ../Src/DasherCore/DasherInterfaceBase.cpp:782
+#: Data/GUI/dasher.traditional.ui:134
+#: Src/DasherCore/DasherInterfaceBase.cpp:795
 msgid "Direct Mode"
 msgstr "Közvetlen mód"
 
-#: ../Data/GUI/dasher.traditional.ui.h:21
+#: Data/GUI/dasher.traditional.ui:135
 msgid "_Direct Mode"
 msgstr "_Közvetlen mód"
 
-#: ../Data/GUI/dasher.traditional.ui.h:22
+#: Data/GUI/dasher.traditional.ui:141
 msgid "_Game Mode"
 msgstr "_Játékmód"
 
-#: ../Data/GUI/dasher.traditional.ui.h:24
+#: Data/GUI/dasher.traditional.ui:296
 msgid "Speed:"
 msgstr "Sebesség:"
 
-#: ../Data/GUI/dasher.traditional.ui.h:25
+#: Data/GUI/dasher.traditional.ui:342
 msgid "Alphabet:"
 msgstr "Ábécé:"
 
 #. think XML_LChar==char, depends on preprocessor variables...
 #. /TRANSLATORS: the first string is the error message from the XML Parser;
 #. / the second is the URL of the file we're trying to read.
-#: ../Src/DasherCore/AbstractXMLParser.cpp:63
+#: Src/DasherCore/AbstractXMLParser.cpp:63
 #, c-format
 msgid "XML Error %s in file %s "
 msgstr "%s XML hiba ebben a fájlban: %s "
 
-#: ../Src/DasherCore/Alphabet/AlphabetMap.cpp:116
+#: Src/DasherCore/Alphabet/AlphabetMap.cpp:116
 #, c-format
 msgid ""
 "File ends with incomplete UTF-8 character beginning 0x%x (expecting %i bytes "
@@ -531,7 +524,7 @@ msgstr ""
 "A fájl befejezetlen 0x%x kezdetű UTF-8 karakterrel végződik (%i bájt várt, "
 "de csak %i van)"
 
-#: ../Src/DasherCore/Alphabet/AlphabetMap.cpp:127
+#: Src/DasherCore/Alphabet/AlphabetMap.cpp:127
 #, c-format
 msgid "Read invalid UTF-8 character 0x%x"
 msgstr "Érvénytelen 0x%x UTF-8 karakter olvasása"
@@ -539,7 +532,7 @@ msgstr "Érvénytelen 0x%x UTF-8 karakter olvasása"
 #. /TRANSLATORS: the string "GameTextFile" is the name of a setting in gsettings
 #. / (or equivalent), and should not be translated. The %s is the value of that
 #. / setting (this message displayed only if the user has provided a value)
-#: ../Src/DasherCore/AlphabetManager.cpp:213
+#: Src/DasherCore/AlphabetManager.cpp:213
 #, c-format
 msgid ""
 "Note: GameTextFile setting specifies game sentences file '%s' but this does "
@@ -549,42 +542,31 @@ msgstr ""
 "fájlt, de ez nem létezik"
 
 #. TRANSLATORS: The number of time steps over which to perform the zooming motion in button mode.
-#: ../Src/DasherCore/AlternatingDirectMode.cpp:28
-#: ../Src/DasherCore/ButtonMode.cpp:28 ../Src/DasherCore/CompassMode.cpp:28
-#: ../Src/DasherCore/StylusFilter.cpp:11
+#: Src/DasherCore/AlternatingDirectMode.cpp:28 Src/DasherCore/ButtonMode.cpp:28
+#: Src/DasherCore/CompassMode.cpp:28 Src/DasherCore/StylusFilter.cpp:11
 msgid "Frames over which to perform zoom"
 msgstr "Képkockák, amelyek fölött a nagyítás elvégzendő"
 
 #. TRANSLATORS: Intercept keyboard events for 'special' keys even when the Dasher window doesn't have keyboard focus.
-#: ../Src/DasherCore/AlternatingDirectMode.cpp:30
-#: ../Src/DasherCore/ButtonMode.cpp:39 ../Src/DasherCore/CompassMode.cpp:32
+#: Src/DasherCore/AlternatingDirectMode.cpp:30 Src/DasherCore/ButtonMode.cpp:39
+#: Src/DasherCore/CompassMode.cpp:32
 msgid "Global keyboard grab"
 msgstr "Billentyűzet globális megragadása"
 
 #. menu
-#: ../Src/DasherCore/AlternatingDirectMode.cpp:34
+#: Src/DasherCore/AlternatingDirectMode.cpp:34
 msgid "Alternating Direct Mode"
 msgstr "Váltakozó közvetlen mód"
 
-#: ../Src/DasherCore/AutoSpeedControl.cpp:200
-#, c-format
-msgid "Auto-increasing speed to %0.2f"
-msgstr "Sebesség automatikus növelése %0.2f értékig"
-
-#: ../Src/DasherCore/AutoSpeedControl.cpp:200
-#, c-format
-msgid "Auto-decreasing speed to %0.2f"
-msgstr "Sebesség automatikus csökkentése %0.2f értékig"
-
-#: ../Src/DasherCore/ButtonMode.cpp:29
+#: Src/DasherCore/ButtonMode.cpp:29
 msgid "Scan time in menu mode (0 to not scan)"
 msgstr "Beolvasási idő menü módban (0 = nincs beolvasás)"
 
-#: ../Src/DasherCore/ButtonMode.cpp:30
+#: Src/DasherCore/ButtonMode.cpp:30
 msgid "Number of forward boxes"
 msgstr "Továbbított dobozok száma"
 
-#: ../Src/DasherCore/ButtonMode.cpp:31
+#: Src/DasherCore/ButtonMode.cpp:31
 msgid "Safety margin"
 msgstr "Biztonsági korlát"
 
@@ -593,11 +575,11 @@ msgstr "Biztonsági korlát"
 #. * however the code seems to use ratio = (129/127)^-r, instead of
 #. * ratio = exp(r/128) used in the design document
 #.
-#: ../Src/DasherCore/ButtonMode.cpp:37
+#: Src/DasherCore/ButtonMode.cpp:37
 msgid "Box non-uniformity"
 msgstr "Dobozok eltérése"
 
-#: ../Src/DasherCore/ClickFilter.cpp:9
+#: Src/DasherCore/ClickFilter.cpp:9
 msgid "Maximum Zoom"
 msgstr "Maximális nagyítás"
 
@@ -605,7 +587,7 @@ msgstr "Maximális nagyítás"
 #. a piece of y-axis to be zoomed to, based on the mouse coordinates. The
 #. "guides" are lines from the mouse position to the edges of the piece of
 #. y-axis.
-#: ../Src/DasherCore/ClickFilter.cpp:15
+#: Src/DasherCore/ClickFilter.cpp:15
 msgid "Draw guides on screen to show area into which a click will zoom"
 msgstr ""
 "Segédvonalak rajzolása a kattintás által nagyítandó terület megjelenítéséhez"
@@ -613,28 +595,28 @@ msgstr ""
 #. TRANSLATORS: As dasher's on-screen coordinate space is not flat,
 #. the straight guide lines should in fact really be curved. This option
 #. draws the guides as correct, though possibly more confusing, curves.
-#: ../Src/DasherCore/ClickFilter.cpp:19
+#: Src/DasherCore/ClickFilter.cpp:19
 msgid "Curve lines to follow the non-linearity of the view transform"
 msgstr ""
 "Vonalak görbítése a nézettranszformáció nem lineárisságának követéséhez"
 
-#: ../Src/DasherCore/ClickFilter.h:23
+#: Src/DasherCore/ClickFilter.h:23
 msgid "Click Mode"
 msgstr "Kattintás módja"
 
 #. TRANSLATORS: The zoom factor per press when moving to the right in compass mode.
-#: ../Src/DasherCore/CompassMode.cpp:30
+#: Src/DasherCore/CompassMode.cpp:30
 msgid "Right zoom"
 msgstr "Nagyítás jobbra"
 
 #. bMenu
-#: ../Src/DasherCore/CompassMode.cpp:38
+#: Src/DasherCore/CompassMode.cpp:38
 msgid "Compass Mode"
 msgstr "Iránytű mód"
 
 #. /TRANSLATORS: %s is the name of the alphabet; the string "GameTextFile"
 #. / refers to a setting name in gsettings or equivalent, and should not be translated.
-#: ../Src/DasherCore/DasherInterfaceBase.cpp:301
+#: Src/DasherCore/DasherInterfaceBase.cpp:314
 #, c-format
 msgid ""
 "Could not find game sentences file for %s - check alphabet definition, or "
@@ -643,25 +625,25 @@ msgstr ""
 "Nem található a játék mondat fájl ehhez: %s - ellenőrizze az ábécé "
 "meghatározást, vagy írja felül a GameTextFile beállítással"
 
-#: ../Src/DasherCore/DasherInterfaceBase.cpp:771
+#: Src/DasherCore/DasherInterfaceBase.cpp:784
 msgid "Normal Control"
 msgstr "Normális vezérlés"
 
 #. TODO: specialist factory for button mode
-#: ../Src/DasherCore/DasherInterfaceBase.cpp:781
+#: Src/DasherCore/DasherInterfaceBase.cpp:794
 msgid "Menu Mode"
 msgstr "Menü mód"
 
-#: ../Src/DasherCore/DefaultFilter.cpp:14
+#: Src/DasherCore/DefaultFilter.cpp:14
 msgid "Vertical distance from mouse/gaze to target (400=screen height)"
 msgstr ""
 "Függőleges távolság az egér/tekintet és a cél között (400 = kijelzőmagasság)"
 
-#: ../Src/DasherCore/DefaultFilter.cpp:15
+#: Src/DasherCore/DefaultFilter.cpp:15
 msgid "Learn offset (previous) automatically, e.g. gazetrackers"
 msgstr "Eltolás (előző) automatikus megtanulása, például tekintetkövetők"
 
-#: ../Src/DasherCore/DefaultFilter.cpp:16
+#: Src/DasherCore/DefaultFilter.cpp:16
 msgid ""
 "At top and bottom, scroll more and translate less (makes error-correcting "
 "easier)"
@@ -669,7 +651,7 @@ msgstr ""
 "Fent és lent több görgetés és kevesebb fordítás (egyszerűbbé teszi a "
 "hibajavítást)"
 
-#: ../Src/DasherCore/DefaultFilter.cpp:17
+#: Src/DasherCore/DefaultFilter.cpp:17
 msgid ""
 "Screen geometry (mostly for tall thin screens) - 0=old-style, 1=square no-"
 "xhair, 2=squish, 3=squish+log"
@@ -677,7 +659,7 @@ msgstr ""
 "Képernyő geometria (többnyire a magas, vékony kijelzőkhöz) - 0=régimódi, "
 "1=négyzet, nincs célkereszt, 2=giccs, 3=giccs+napló"
 
-#: ../Src/DasherCore/DefaultFilter.cpp:18
+#: Src/DasherCore/DefaultFilter.cpp:18
 msgid ""
 "Shape type: 0=disjoint rects, 1=overlapping, 2=triangles, 3=trunc-tris, "
 "4=quadrics, 5=circles"
@@ -685,7 +667,7 @@ msgstr ""
 "Alakzat típusa: 0=különálló téglalapok, 1=átfedés, 2=háromszögek, 3=trunc-"
 "tris, 4=quadrics, 5= körök"
 
-#: ../Src/DasherCore/DefaultFilter.cpp:19
+#: Src/DasherCore/DefaultFilter.cpp:19
 msgid ""
 "Distance from right-hand-side Y-axis, at which maximum speed is reached. "
 "(2048=xhair)"
@@ -693,42 +675,41 @@ msgstr ""
 "Távolság a jobb kéz felőli Y-tengelytől, amelynél a maximális sebességet "
 "elérte. (2048=célkereszt)"
 
-#: ../Src/DasherCore/DefaultFilter.cpp:20
+#: Src/DasherCore/DefaultFilter.cpp:20
 msgid "Hold right mouse button / key 1 to go 3/4 faster"
 msgstr ""
 "A jobb egérgomb / 1-es billentyű nyomva tartása a 3/4-del gyorsabb haladáshoz"
 
-#: ../Src/DasherCore/DefaultFilter.cpp:21
+#: Src/DasherCore/DefaultFilter.cpp:21
 msgid "Use exact computation of per-frame movement (slower)"
 msgstr "A képkockánkénti mozgás pontos számításának használata (lassabb)"
 
-#: ../Src/DasherCore/DemoFilter.cpp:15
+#: Src/DasherCore/DemoFilter.cpp:15
 msgid "Demo Mode (no input)"
 msgstr "Demó mód (nincs bemenet)"
 
-#: ../Src/DasherCore/GameModule.cpp:8
+#: Src/DasherCore/GameModule.cpp:8
 msgid "Filename of sentences to enter"
 msgstr "A megadni kívánt mondatok fájlneve"
 
-#: ../Src/DasherCore/GameModule.cpp:9
+#: Src/DasherCore/GameModule.cpp:9
 msgid "Distance of sentence from center to decide user needs help"
 msgstr ""
 "A mondat távolsága a közepétől annak eldöntésére, hogy a felhasználónak "
 "szüksége van-e segítségre"
 
-#: ../Src/DasherCore/GameModule.cpp:10
+#: Src/DasherCore/GameModule.cpp:10
 msgid "Time for which user must need help before help drawn"
 msgstr ""
 "Idő ahhoz, hogy mely felhasználónak kell segítség, mielőtt segítséget "
 "nyújtott"
 
-#: ../Src/DasherCore/GameModule.cpp:11
+#: Src/DasherCore/GameModule.cpp:11
 msgid "When we give help, show the shortest path to the target sentence?"
 msgstr ""
 "Amikor segítséget adunk, jelenjen meg a legrövidebb útvonal a célmondathoz?"
 
-#: ../Src/DasherCore/MandarinAlphMgr.cpp:176
-#: ../Src/DasherCore/RoutingAlphMgr.cpp:128
+#: Src/DasherCore/MandarinAlphMgr.cpp:176 Src/DasherCore/RoutingAlphMgr.cpp:128
 #, c-format
 msgid ""
 "Warning: faulty alphabet definition: training-start delimiter %s must be a "
@@ -738,7 +719,7 @@ msgstr ""
 "elválasztónak egyedüli Unicode karakternek kell lennie. Esetleg nem "
 "dolgozható fel a gyakorlófájl."
 
-#: ../Src/DasherCore/MandarinAlphMgr.cpp:186
+#: Src/DasherCore/MandarinAlphMgr.cpp:186
 #, c-format
 msgid ""
 "Warning: training file contains character '%s' as member of group '%s', but "
@@ -748,7 +729,7 @@ msgstr ""
 "tagjaként, de nincs olyan nevű csoport, amely tartalmazza a karaktert; "
 "csoportmegadó mellőzése"
 
-#: ../Src/DasherCore/MandarinAlphMgr.cpp:199
+#: Src/DasherCore/MandarinAlphMgr.cpp:199
 #, c-format
 msgid ""
 "Warning: training file contains character '%s' as member of group '%s', but "
@@ -759,8 +740,7 @@ msgstr ""
 "tagjaként, de nincs olyan nevű csoport, amely tartalmazza a karaktert. A "
 "Dasher nem lesz képes megtanulni, hogy hogyan szeretné írni ezt a karaktert."
 
-#: ../Src/DasherCore/MandarinAlphMgr.cpp:200
-#: ../Src/DasherCore/RoutingAlphMgr.cpp:147
+#: Src/DasherCore/MandarinAlphMgr.cpp:200 Src/DasherCore/RoutingAlphMgr.cpp:147
 #, c-format
 msgid ""
 "Warning: training file contains character '%s' as member of group '%s', but "
@@ -771,8 +751,7 @@ msgstr ""
 "tagjaként, de az ábécé számos ilyen csoportot tartalmaz. A Dasher nem lesz "
 "képes megtanulni, hogy hogyan szeretné írni ezt a karaktert."
 
-#: ../Src/DasherCore/MandarinAlphMgr.cpp:220
-#: ../Src/DasherCore/RoutingAlphMgr.cpp:164
+#: Src/DasherCore/MandarinAlphMgr.cpp:220 Src/DasherCore/RoutingAlphMgr.cpp:164
 #, c-format
 msgid ""
 "Warning: in training file, annotation '<%s>' is followed by another "
@@ -781,7 +760,10 @@ msgstr ""
 "Figyelmeztetés: a gyakorlófájlban a(z) „<%s>” magyarázatot egy másik "
 "magyarázat követi és mellőzve lesz"
 
-#: ../Src/DasherCore/MandarinAlphMgr.cpp:247
+#. /TRANSLATORS: first string will be the filename; after the end of the string,
+#. / some number of output (e.g. Chinese) characters will be appended,
+#. / the number of which is the integer here
+#: Src/DasherCore/MandarinAlphMgr.cpp:244
 #, c-format
 msgid ""
 "In file %s, the following %i symbol appeared without annotations saying how "
@@ -802,28 +784,16 @@ msgstr[1] ""
 "Dasher nem lesz képes megtanulni, hogy hogyan szeretné megadni ezeket a "
 "szimbólumokat:"
 
-#: ../Src/DasherCore/MandarinAlphMgr.cpp:251
-#, c-format
-msgid ""
-"In file %s, the following %i symbols appeared without annotations saying how "
-"they should be entered, but each can be entered in several ways. Dasher will "
-"not be able to learn how you want to enter these symbols:"
-msgstr ""
-"A(z) %s fájlban a következő %i szimbólum jelent meg magyarázatok nélkül, "
-"amelyek megmondják, hogyan kellene megadni, de megadhatók számos módon. A "
-"Dasher nem lesz képes megtanulni, hogy hogyan szeretné megadni ezeket a "
-"szimbólumokat:"
-
-#: ../Src/DasherCore/NodeCreationManager.cpp:33
+#: Src/DasherCore/NodeCreationManager.cpp:33
 msgid "Training on User Text"
 msgstr "Gyakorlás a felhasználói szövegen"
 
-#: ../Src/DasherCore/NodeCreationManager.cpp:33
+#: Src/DasherCore/NodeCreationManager.cpp:33
 msgid "Training on System Text"
 msgstr "Gyakorlás a rendszer szövegen"
 
 #. /TRANSLATORS: These 3 messages will be displayed when the user has just chosen a new alphabet. The %s parameter will be the name of the alphabet.
-#: ../Src/DasherCore/NodeCreationManager.cpp:90
+#: Src/DasherCore/NodeCreationManager.cpp:90
 #, c-format
 msgid ""
 "No user training text found - if you have written in \"%s\" before, this "
@@ -832,7 +802,7 @@ msgstr ""
 "Nem található felhasználói gyakorlószöveg - ha korábban már írt ebbe: „%s”, "
 "akkor az azt jelenti, hogy a Dasher nem tanult a korábbi munkamenetekből"
 
-#: ../Src/DasherCore/NodeCreationManager.cpp:91
+#: Src/DasherCore/NodeCreationManager.cpp:91
 #, c-format
 msgid ""
 "No training text (user or system) found for \"%s\". Dasher will still work "
@@ -844,7 +814,7 @@ msgstr ""
 "le egy gyakorlószöveg fájlt a Dasher weboldaláról, vagy készítse el a "
 "sajátját."
 
-#: ../Src/DasherCore/NodeCreationManager.cpp:97
+#: Src/DasherCore/NodeCreationManager.cpp:97
 #, c-format
 msgid ""
 "\"%s\" does not specify training file. Dasher will work but entry will be "
@@ -855,75 +825,75 @@ msgstr ""
 "rendelkezik-e."
 
 #. TRANSLATORS: The time for which a button must be held before it counts as a 'long' (rather than short) press.
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:31
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:32
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:31
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:32
 msgid "Long press time"
 msgstr "Hosszú lenyomás ideje"
 
 #. TRANSLATORS: Double-clicks are special in some situations (they cause us to start reversing). This is the time in which the button must be pressed twice to count.
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:33
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:33
 msgid "Double-press time"
 msgstr "Dupla lenyomás ideje"
 
 # fixme ezmiez?
 #. TRANSLATORS: Backoff = reversing in Dasher to correct mistakes. This allows a single button to be dedicated to activating backoff, rather than using multiple presses of other buttons.
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:35
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:35
 msgid "Enable backoff button"
 msgstr "Visszalépés gomb engedélyezése"
 
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:36
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:43
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:37
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:36
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:43
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:37
 msgid "Slow startup"
 msgstr "Lassú indítás"
 
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:37
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:44
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:37
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:44
 msgid "Startup time"
 msgstr "Indítási idő"
 
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:38
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:46
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:39
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:38
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:46
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:39
 msgid "Percentage by which to automatically increase speed"
 msgstr "A sebesség automatikus növelése ennyi százalékkal"
 
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:39
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:47
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:40
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:39
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:47
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:40
 msgid "Time after which to automatically increase speed (secs)"
 msgstr "A sebesség automatikus növelése ennyi idő után (mp)"
 
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:40
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:48
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:41
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:40
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:48
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:41
 msgid "Percentage by which to decrease speed upon reverse"
 msgstr "Sebesség csökkentése ennyi százalékkal fordított módban"
 
-#: ../Src/DasherCore/OneButtonDynamicFilter.cpp:44
+#: Src/DasherCore/OneButtonDynamicFilter.cpp:44
 msgid "One Button Dynamic Mode"
 msgstr "Egy gombos dinamikus mód"
 
-#: ../Src/DasherCore/OneButtonFilter.cpp:12
+#: Src/DasherCore/OneButtonFilter.cpp:12
 msgid "Scan time (each direction), in ms"
 msgstr "Beolvasási idő (minden irányba), ezredmásodpercben"
 
-#: ../Src/DasherCore/OneButtonFilter.cpp:13
+#: Src/DasherCore/OneButtonFilter.cpp:13
 msgid "Factor by which to zoom in"
 msgstr "Nagyítási tényező"
 
-#: ../Src/DasherCore/OneButtonFilter.cpp:14
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:45
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:42
+#: Src/DasherCore/OneButtonFilter.cpp:14
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:45
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:42
 msgid "Lag before user actually pushes button (ms)"
 msgstr "Késleltetés a gomb tényleges megnyomása előtt (ezredmásodperc)"
 
 #. COneDimensionalFilter(CSettingsStore *pSettingsStore, CDasherInterfaceBase *pInterface, CDasherModel *m_pDasherModel);
-#: ../Src/DasherCore/OneDimensionalFilter.h:12
+#: Src/DasherCore/OneDimensionalFilter.h:12
 msgid "One Dimensional Mode"
 msgstr "Egydimenziós mód"
 
-#: ../Src/DasherCore/RoutingAlphMgr.cpp:146
+#: Src/DasherCore/RoutingAlphMgr.cpp:146
 #, c-format
 msgid ""
 "Warning: training file contains character '%s' as member of group '%s', but "
@@ -933,114 +903,113 @@ msgstr ""
 "tagjaként, de nincs olyan nevű csoport, amely tartalmazza a karaktert. "
 "Csoportmegadó mellőzése."
 
-#: ../Src/DasherCore/SettingsStore.cpp:100
-#: ../Src/Gtk2/DasherAppSettings.cpp:127 ../Src/Gtk2/DasherAppSettings.cpp:131
+#: Src/DasherCore/SettingsStore.cpp:100 Src/Gtk2/DasherAppSettings.cpp:127
+#: Src/Gtk2/DasherAppSettings.cpp:131
 msgid "true"
 msgstr "igaz"
 
-#: ../Src/DasherCore/SettingsStore.cpp:100
+#: Src/DasherCore/SettingsStore.cpp:100
 msgid "True"
 msgstr "Igaz"
 
-#: ../Src/DasherCore/SettingsStore.cpp:102
-#: ../Src/Gtk2/DasherAppSettings.cpp:127 ../Src/Gtk2/DasherAppSettings.cpp:131
+#: Src/DasherCore/SettingsStore.cpp:102 Src/Gtk2/DasherAppSettings.cpp:127
+#: Src/Gtk2/DasherAppSettings.cpp:131
 msgid "false"
 msgstr "hamis"
 
-#: ../Src/DasherCore/SettingsStore.cpp:102
-#| msgid "false"
+#: Src/DasherCore/SettingsStore.cpp:102
 msgid "False"
 msgstr "Hamis"
 
 #. Note to translators: This message will be output for a command line
 #. with "--options foo=VAL" and foo is a boolean valued parameter, but
 #. "VAL" is not true or false.
-#: ../Src/DasherCore/SettingsStore.cpp:108
+#: Src/DasherCore/SettingsStore.cpp:108
 msgid "boolean value must be specified as 'true' or 'false'."
 msgstr "a logikai értéknek az „igaz” vagy „hamis” egyikének kell lennie."
 
 #. Note to translators: This is output when command line "--options" doesn't
 #. specify a known option.
-#: ../Src/DasherCore/SettingsStore.cpp:130
+#: Src/DasherCore/SettingsStore.cpp:130
 msgid "unknown option, use \"--help-options\" for more information."
 msgstr ""
 "ismeretlen kapcsoló, további információkért használja a „--help-options” "
 "kapcsolót."
 
-#: ../Src/DasherCore/SocketInputBase.cpp:27
+#: Src/DasherCore/SocketInputBase.cpp:27
 msgid "Port:"
 msgstr "Port:"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:28
+#: Src/DasherCore/SocketInputBase.cpp:28
 msgid "X label:"
 msgstr "X címke:"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:29
+#: Src/DasherCore/SocketInputBase.cpp:29
 msgid "X minimum:"
 msgstr "X minimum:"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:30
+#: Src/DasherCore/SocketInputBase.cpp:30
 msgid "X maximum:"
 msgstr "X maximum:"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:31
+#: Src/DasherCore/SocketInputBase.cpp:31
 msgid "Y label:"
 msgstr "Y címke:"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:32
+#: Src/DasherCore/SocketInputBase.cpp:32
 msgid "Y minimum:"
 msgstr "Y minimum:"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:33
+#: Src/DasherCore/SocketInputBase.cpp:33
 msgid "Y maximum:"
 msgstr "Y maximum:"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:34
+#: Src/DasherCore/SocketInputBase.cpp:34
 msgid "Print socket-related debugging information to console:"
 msgstr "A foglalattal kapcsolatos hibakereső információk írása konzolra"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:38
+#: Src/DasherCore/SocketInputBase.cpp:38
 msgid "Socket Input"
 msgstr "Foglalatbemenet"
 
 #. TODO This is not a very good error message even in English...???
-#: ../Src/DasherCore/SocketInputBase.cpp:108
+#: Src/DasherCore/SocketInputBase.cpp:108
 msgid "Error creating socket"
 msgstr "Hiba a foglalat létrehozásakor"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:116
+#: Src/DasherCore/SocketInputBase.cpp:116
 msgid "Error binding to socket - already in use?"
 msgstr "Hiba a foglalathoz való kötéskor - már használatban van?"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:169
+#: Src/DasherCore/SocketInputBase.cpp:169
 #, c-format
 msgid "Warning truncating socket input label '%s' to %i characters."
 msgstr "Figyelem, a(z) „%s” foglalatbemenet címke csonkítása %i karakterre."
 
-#: ../Src/DasherCore/SocketInputBase.cpp:195
+#: Src/DasherCore/SocketInputBase.cpp:195
 msgid "Socket input: Error reading from socket"
 msgstr "Foglalat bevitel: hiba a foglalatról olvasás közben"
 
-#: ../Src/DasherCore/SocketInputBase.cpp:297
+#: Src/DasherCore/SocketInputBase.cpp:297
 #, c-format
 msgid "Dasher Socket Input error: %s: %s"
 msgstr "Dasher foglalat beviteli hiba: %s: %s"
 
 #. TODO should probably pop up a Gtk error message and think about how to do i18n:
-#: ../Src/DasherCore/SocketInput.cpp:31
+#: Src/DasherCore/SocketInput.cpp:31
 msgid "Dasher socket input: failed to launch reader thread."
 msgstr "Dasher foglalatbemenet: az olvasó szál indítása meghiúsult."
 
-#: ../Src/DasherCore/StylusFilter.cpp:10
+#: Src/DasherCore/StylusFilter.cpp:10
 msgid "Max time for a 'tap' (anything longer is held)"
 msgstr "Maximális idő az „érintéshez” (valami hosszabban tartva)"
 
-#: ../Src/DasherCore/StylusFilter.h:12
+#: Src/DasherCore/StylusFilter.h:12
 msgid "Stylus Control"
 msgstr "Stílusvezérlés"
 
 #. no context switch commands will be executed!
-#: ../Src/DasherCore/Trainer.cpp:34
+#: Src/DasherCore/Trainer.cpp:34
 #, c-format
 msgid ""
 "Warning: faulty alphabet definition, escape sequence %s must be a single "
@@ -1049,63 +1018,63 @@ msgstr ""
 "Figyelmeztetés: hibás ábécé meghatározás: a(z) %s elfedéssorozatnak egyedüli "
 "Unicode karakternek kell lennie. Ez ronthatja a Dasher szöveg-előrejelzését."
 
-#: ../Src/DasherCore/Trainer.cpp:101
+#: Src/DasherCore/Trainer.cpp:101
 #, c-format
 msgid "Unable to open file \"%s\" for reading"
 msgstr "Nem nyitható meg a(z) „%s” fájl olvasásra"
 
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:30
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:30
 msgid "Button offset"
 msgstr "Gombeltolás"
 
 #. TRANSLATORS: Multiple button presses are special (like a generalisation on double clicks) in some situations. This is the maximum time between two presses to count as _part_of_ a multi-press gesture
 #. (potentially more than two presses).
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:35
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:35
 msgid "Multiple press interval"
 msgstr "Többszörös lenyomás időköze"
 
 # fixme ezmiez?
 #. TRANSLATORS: Backoff = reversing in Dasher to correct mistakes. This allows a single button to be dedicated to activating backoff, rather than using multiple presses of other buttons, and another to be dedicated to starting and stopping. 'Button' in this context is a physical hardware device, not a UI element.
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:37
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:36
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:37
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:36
 msgid "Enable backoff and start/stop buttons"
 msgstr "Visszalépés és indítás/leállítás gomb engedélyezése"
 
 #. TRANSLATORS: What is normally the up button becomes the down button etc.
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:39
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:39
 msgid "Reverse up and down buttons"
 msgstr "Fel és le gombok felcserélése"
 
 #. TRANSLATORS: Pushing the up/down button twice quickly has the same effect as pushing the other
 #. button once; in this case, one must push three times (or push-and-hold) to reverse.
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:42
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:42
 msgid "Double-click is opposite up/down — triple to reverse"
 msgstr ""
 "A dupla kattintás felcseréli a fel/le gombot – a tripla kattintás megfordítja"
 
-#: ../Src/DasherCore/TwoButtonDynamicFilter.cpp:52
+#: Src/DasherCore/TwoButtonDynamicFilter.cpp:52
 msgid "Two Button Dynamic Mode"
 msgstr "Kétgombos dinamikus mód"
 
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:30
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:30
 msgid "Offset for outer (second) button"
 msgstr "Külső (második) gomb eltolása"
 
 #. divisor
 #. step
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:31
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:31
 msgid "Distance between down markers (long gap)"
 msgstr "Távolság a le jelölők között (nagy rés)"
 
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:32
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:32
 msgid "Distance between up markers, as percentage of long gap"
 msgstr "Távolság a fel jelölők között a nagy rés százalékaként"
 
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:33
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:33
 msgid "Tolerance for inaccurate timing of button pushes (in ms)"
 msgstr "Gombnyomások pontatlan időzítésének tűrése (ezredmásodperc)"
 
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:34
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:34
 msgid ""
 "Use push and release times of single press rather than push times of two "
 "presses"
@@ -1113,62 +1082,61 @@ msgstr ""
 "Az egyszeres lenyomás nyomás és felengedés idejeinek használata a két "
 "lenyomás nyomásidejei helyett"
 
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:38
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:38
 msgid "Slow startup time"
 msgstr "Lassú indítás"
 
-#: ../Src/DasherCore/TwoPushDynamicFilter.cpp:46
+#: Src/DasherCore/TwoPushDynamicFilter.cpp:46
 msgid "Two-push Dynamic Mode (New One Button)"
 msgstr "Két gombnyomásos dinamikus mód (új egygombos)"
 
-#: ../Src/Gtk2/DasherAppSettings.cpp:124
+#: Src/Gtk2/DasherAppSettings.cpp:124
 msgid "Boolean parameters"
 msgstr "Logikai paraméterek"
 
-#: ../Src/Gtk2/DasherAppSettings.cpp:124 ../Src/Gtk2/DasherAppSettings.cpp:135
-#: ../Src/Gtk2/DasherAppSettings.cpp:146
+#: Src/Gtk2/DasherAppSettings.cpp:124 Src/Gtk2/DasherAppSettings.cpp:135
+#: Src/Gtk2/DasherAppSettings.cpp:146
 msgid "Default"
 msgstr "Alapértelmezett"
 
-#: ../Src/Gtk2/DasherAppSettings.cpp:124 ../Src/Gtk2/DasherAppSettings.cpp:135
-#: ../Src/Gtk2/DasherAppSettings.cpp:146
+#: Src/Gtk2/DasherAppSettings.cpp:124 Src/Gtk2/DasherAppSettings.cpp:135
+#: Src/Gtk2/DasherAppSettings.cpp:146
 msgid "Description"
 msgstr "Leírás"
 
-#: ../Src/Gtk2/DasherAppSettings.cpp:135
+#: Src/Gtk2/DasherAppSettings.cpp:135
 msgid "Integer parameters"
 msgstr "Egész paraméterek"
 
-#: ../Src/Gtk2/DasherAppSettings.cpp:146
+#: Src/Gtk2/DasherAppSettings.cpp:146
 msgid "String parameters"
 msgstr "Karakterlánc paraméterek"
 
-#: ../Src/Gtk2/dasher_editor.cpp:812 ../Src/Gtk2/dasher_main.cpp:550
-#: ../Src/Gtk2/dasher_main.cpp:885
+#: Src/Gtk2/dasher_editor.cpp:812 Src/Gtk2/dasher_main.cpp:550
+#: Src/Gtk2/dasher_main.cpp:885
 msgid "_Open"
 msgstr "_Megnyitás"
 
-#: ../Src/Gtk2/dasher_editor.cpp:814 ../Src/Gtk2/dasher_editor.cpp:848
-#: ../Src/Gtk2/dasher_main.cpp:549 ../Src/Gtk2/dasher_main.cpp:886
-#| msgid "Cancel"
+#: Src/Gtk2/dasher_editor.cpp:814 Src/Gtk2/dasher_editor.cpp:848
+#: Src/Gtk2/dasher_main.cpp:549 Src/Gtk2/dasher_main.cpp:886
 msgid "_Cancel"
 msgstr "_Mégse"
 
-#: ../Src/Gtk2/dasher_editor.cpp:846
+#: Src/Gtk2/dasher_editor.cpp:846
 msgid "_Save"
 msgstr "_Mentés"
 
 #. Note to translators: This message will be output for command line errors when the "=" in --options=foo is missing.
-#: ../Src/Gtk2/dasher_main.cpp:231
+#: Src/Gtk2/dasher_main.cpp:231
 msgid "option setting is missing \"=\"."
 msgstr "A kapcsoló beállításából hiányzik az „=”."
 
 #. Note to translators: This string will be output when --options= specifies an unknown option.
-#: ../Src/Gtk2/dasher_main.cpp:247
+#: Src/Gtk2/dasher_main.cpp:247
 msgid "Invalid option string specified"
 msgstr "Érvénytelen kapcsolót adott meg"
 
-#: ../Src/Gtk2/dasher_main.cpp:607
+#: Src/Gtk2/dasher_main.cpp:607
 msgid ""
 "Welcome to Dasher Game Mode! Game Mode is a fun way to practice entering "
 "text in Dasher. Please select a training text to play with:"
@@ -1177,19 +1145,19 @@ msgstr ""
 "bevitelének gyakorlására a Dasherben. Kérjük válasszon egy gyakorló szöveget "
 "a játékhoz:"
 
-#: ../Src/Gtk2/dasher_main.cpp:609
+#: Src/Gtk2/dasher_main.cpp:609
 msgid "Use Default"
 msgstr "Alapértelmezett használata"
 
-#: ../Src/Gtk2/dasher_main.cpp:610
+#: Src/Gtk2/dasher_main.cpp:610
 msgid "Choose File..."
 msgstr "Válasszon fájlt…"
 
-#: ../Src/Gtk2/dasher_main.cpp:611
+#: Src/Gtk2/dasher_main.cpp:611
 msgid "Cancel"
 msgstr "Mégse"
 
-#: ../Src/Gtk2/dasher_main.cpp:634
+#: Src/Gtk2/dasher_main.cpp:634
 msgid ""
 "Are you sure you wish to turn off game mode? All unsaved changes will be "
 "lost."
@@ -1197,15 +1165,15 @@ msgstr ""
 "Valóban ki szeretné kapcsolni a játékmódot? Az összes nem mentett "
 "változtatás elvész."
 
-#: ../Src/Gtk2/dasher_main.cpp:636
+#: Src/Gtk2/dasher_main.cpp:636
 msgid "No"
 msgstr "Nem"
 
-#: ../Src/Gtk2/dasher_main.cpp:637
+#: Src/Gtk2/dasher_main.cpp:637
 msgid "Yes"
 msgstr "Igen"
 
-#: ../Src/Gtk2/dasher_main.cpp:922
+#: Src/Gtk2/dasher_main.cpp:922
 #, c-format
 msgid ""
 "Do you want to save your changes to %s?\n"
@@ -1216,7 +1184,7 @@ msgstr ""
 "\n"
 "Ha nem menti őket, akkor változtatásai elvesznek."
 
-#: ../Src/Gtk2/dasher_main.cpp:929
+#: Src/Gtk2/dasher_main.cpp:929
 msgid ""
 "Do you want to save your changes?\n"
 "\n"
@@ -1226,31 +1194,31 @@ msgstr ""
 "\n"
 "Ha nem menti őket, akkor változtatásai elvesznek."
 
-#: ../Src/Gtk2/dasher_main.cpp:935
+#: Src/Gtk2/dasher_main.cpp:935
 msgid "Quit without saving"
 msgstr "Kilépés mentés nélkül"
 
-#: ../Src/Gtk2/dasher_main.cpp:936 ../Src/Gtk2/dasher_main.cpp:959
+#: Src/Gtk2/dasher_main.cpp:936 Src/Gtk2/dasher_main.cpp:959
 msgid "Don't quit"
 msgstr "Nem lépek ki"
 
-#: ../Src/Gtk2/dasher_main.cpp:937
+#: Src/Gtk2/dasher_main.cpp:937
 msgid "Save and quit"
 msgstr "Mentés és kilépés"
 
-#: ../Src/Gtk2/dasher_main.cpp:956
+#: Src/Gtk2/dasher_main.cpp:956
 msgid "Are you sure you wish to quit?"
 msgstr "Biztosan ki akar lépni?"
 
-#: ../Src/Gtk2/dasher_main.cpp:998
+#: Src/Gtk2/dasher_main.cpp:998
 msgid "Unable to open help file"
 msgstr "A súgófájl nem nyitható meg"
 
-#: ../Src/Gtk2/dasher_main.cpp:1050
+#: Src/Gtk2/dasher_main.cpp:1050
 msgid "Dasher is a predictive text entry application"
 msgstr "A Dasher egy prediktív szövegbeviteli alkalmazás"
 
-#: ../Src/Gtk2/dasher_main.cpp:1055
+#: Src/Gtk2/dasher_main.cpp:1055
 msgid "translator-credits"
 msgstr ""
 "Dvornik László <dvornik@gnome.hu>\n"
@@ -1258,33 +1226,33 @@ msgstr ""
 "Tímár András <timar@gnome.hu>\n"
 "Úr Balázs <urbalazs@gmail.com>"
 
-#: ../Src/Gtk2/module_settings_window.cpp:77
+#: Src/Gtk2/module_settings_window.cpp:77
 msgid "_Close"
 msgstr "_Bezárás"
 
-#: ../Src/Gtk2/module_settings_window.cpp:88
+#: Src/Gtk2/module_settings_window.cpp:88
 msgid "Dasher Module Options"
 msgstr "Dasher modulbeállítások"
 
-#: ../Src/Gtk2/module_settings_window.cpp:94
+#: Src/Gtk2/module_settings_window.cpp:94
 #, c-format
 msgid "%s Options:"
 msgstr "%s beállításai"
 
-#: ../Src/Gtk2/mouse_input.h:14
+#: Src/Gtk2/mouse_input.h:14
 msgid "Mouse Input"
 msgstr "Egérbemenet"
 
-#: ../Src/Gtk2/mouse_input.h:44
+#: Src/Gtk2/mouse_input.h:44
 msgid "Pixels covering Y range"
 msgstr "Az Y tartományt lefedő képpontok"
 
 #. TRANSLATORS: Only use the vertical mouse coordinate - this is prefered for some disabled users.
-#: ../Src/Gtk2/mouse_input.h:51
+#: Src/Gtk2/mouse_input.h:51
 msgid "One Dimensional Mouse Input"
 msgstr "Egydimenziós egérbemenet"
 
-#: ../Src/Gtk2/Preferences.cpp:437
+#: Src/Gtk2/Preferences.cpp:437
 msgid "Action"
 msgstr "Művelet"
 
@@ -1293,31 +1261,47 @@ msgstr "Művelet"
 #. {"textentry", 'o', 0, G_OPTION_ARG_NONE, &textentry, "Onscreen text entry mode", NULL},
 #. {"pipe", 's', 0, G_OPTION_ARG_NONE, &stdoutpipe, "Pipe text to stdout", NULL},
 #. Note to translators: This is the help string for "--appstyle". The four options in brackets MUST either NOT be translated or at least it MUST be clear that they must be used in english. Otherwise a user running a non-english system will receive an error message when using the translated one instead of the english one and has no chance to find out the correct option.
-#: ../Src/main.cc:161
+#: Src/main.cc:161
 msgid "Application style (traditional, direct, compose or fullscreen)"
 msgstr ""
 "Alkalmazás stílusa (a traditional, direct, compose vagy fullscreen egyike)"
 
 #. Note to translators: This is the help string for "--options"
-#: ../Src/main.cc:163
+#: Src/main.cc:163
 msgid "Override stored options"
 msgstr "Tárolt beállítások felülbírálása"
 
-#: ../Src/main.cc:164
+#: Src/main.cc:164
 msgid "XML configuration file name"
 msgstr "XML-beállítófájlnév"
 
 #. Note to translators: This is the help string for "--help-options"
-#: ../Src/main.cc:166
+#: Src/main.cc:166
 msgid "Describe \"--options\"."
 msgstr "A „--options” leírása."
 
 #. parse command line options
 #. Note to translators: This is the "--help" description of dasher.
-#: ../Src/main.cc:172
+#: Src/main.cc:172
 msgid "- A text input application honouring accessibility"
 msgstr ""
 "– Szövegbeviteli alkalmazás, amely figyelembe veszi az akadálymentesítést"
+
+#~ msgid "Auto-increasing speed to %0.2f"
+#~ msgstr "Sebesség automatikus növelése %0.2f értékig"
+
+#~ msgid "Auto-decreasing speed to %0.2f"
+#~ msgstr "Sebesség automatikus csökkentése %0.2f értékig"
+
+#~ msgid ""
+#~ "In file %s, the following %i symbols appeared without annotations saying "
+#~ "how they should be entered, but each can be entered in several ways. "
+#~ "Dasher will not be able to learn how you want to enter these symbols:"
+#~ msgstr ""
+#~ "A(z) %s fájlban a következő %i szimbólum jelent meg magyarázatok nélkül, "
+#~ "amelyek megmondják, hogyan kellene megadni, de megadhatók számos módon. A "
+#~ "Dasher nem lesz képes megtanulni, hogy hogyan szeretné megadni ezeket a "
+#~ "szimbólumokat:"
 
 #~ msgid "Include Clipboard commands"
 #~ msgstr "A vágólap parancsok felvétele"

@@ -1,7 +1,4 @@
-SUBDIRS = Src Data Doc
-if USE_INTLTOOL
-SUBDIRS += po
-endif
+SUBDIRS = Src Data Doc po
 
 ACLOCAL_AMFLAGS = -I m4
 
@@ -16,22 +13,14 @@ EXTRA_DIST = \
 		INSTALL.Windows \
 		MAINTAINERS \
 		m4/pkg.m4 \
-		m4/glib-gettext.m4 \
 		m4/dgconf-2.m4 \
 		m4/gnome-doc-utils.m4 \
-		m4/intltool.m4 \
 		m4/nls.m4 \
-		intltool-merge.in \
-		intltool-extract.in \
-		intltool-update.in \
 		gnome-doc-utils.make \
 		.tarball-version \
 		build-aux/mkversion
 
 DISTCLEANFILES = \
-		intltool-merge \
-		intltool-extract \
-		intltool-update \
 		Data/dasher.desktop \
 		Data/Help/Gnome/Makefile
 
@@ -51,9 +40,6 @@ MAINTAINERCLEANFILES = \
 		$(srcdir)/ltmain.sh \
 		$(srcdir)/missing \
 		$(srcdir)/mkinstalldirs \
-		$(srcdir)/intltool-extract.in \
-		$(srcdir)/intltool-merge.in \
-		$(srcdir)/intltool-update.in \
 		$(srcdir)/omf.make \
 		$(srcdir)/xmldocs.make \
 		$(srcdir)/po/Makefile.in.in

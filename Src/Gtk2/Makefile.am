@@ -1,9 +1,7 @@
-LIBS = @INTLLIBS@ @LIBS@
-
 noinst_LTLIBRARIES = libdashergtk.la libdashercontrol.la
 
-noinst_PROGRAMS = generate-schema
-generate_schema_SOURCES = GenerateSchema.cpp ../DasherCore/Parameters.cpp
+#noinst_PROGRAMS = generate-schema
+#generate_schema_SOURCES = GenerateSchema.cpp ../DasherCore/Parameters.cpp
 
 #bin_PROGRAMS = dasher-config
 
@@ -65,6 +63,7 @@ libdashergtk_la_SOURCES = \
 		dasher_editor.h \
 		dasher_lock_dialogue.cpp \
 		dasher_lock_dialogue.h \
+		dasher_main_private.h \
 		dasher_main.cpp \
 		dasher_main.h \
 		module_settings_window.cpp \

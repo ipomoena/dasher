@@ -19,12 +19,17 @@ based distributions the following can be used.
             gnome-common
             gnome-doc-utils
             libatspi2.0-dev
-            libgtk-3-dev"
+            libgtk-3-dev
+            libspeechd-dev"
   sudo apt-get install $packages
 
 Then autogen:
 
   ./autogen.sh
+
+If the speech support is desired then
+
+  ./autogen.sh --enable-speech=yes
 
 After this, follow "Basic Installation" section in the "INSTALL" file.
 For the "configure" step, the following configure-time options are
@@ -78,3 +83,7 @@ After the installation is done, for Ubuntu and derivatives
 different profiles by running:
 
   ./create-linux-desktop-shortcuts.sh
+
+The Contributor’s Guide
+=======================
+If you would like to contribute to this project, please check out the following guide: https://docs.google.com/document/d/1qosKPV0GXbHs69PyvK9BR3S3oNgdV8il7AVfO1M4Fh4

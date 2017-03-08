@@ -25,4 +25,4 @@ libdashermisc_la_LIBADD = $(LTLIBOBJS)
 
 AM_CXXFLAGS = -I$(srcdir)/../DasherCore
 
-EXTRA_DIST = Common.vcproj Common_vc80.vcproj
+EXTRA_DIST = Common.vcxproj
