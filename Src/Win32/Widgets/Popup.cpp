@@ -31,6 +31,17 @@
 #include "../../DasherCore/DasherInterfaceBase.h"
 #include "../Dasher.h"
 
+/**
+* This class manages the external popup window
+* to be used to be used on an 2nd monitor (extended display).
+*
+* Known Issues:
+*	-> Setting the font- seems to capture size but not name
+*
+*
+*
+*/
+
 
 using namespace Dasher;
 using namespace std;
@@ -40,16 +51,20 @@ using namespace WinUTF8;
 BOOL contains(RECT rectA, RECT rectB);
 BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMonitor, LPARAM dwData);
 
-CPopup::CPopup(CAppSettings *pAppSettings) {
-  
-  // TODO: Check that this is all working okay (it quite probably
-  // isn't). In the long term need specialised editor classes.
-  targetwindow = 0;
 
+/**
+* Constructors, Destructors, Initializers, Setup Functions
+*/
+CPopup::CPopup(CAppSettings *pAppSettings) {
   m_pAppSettings = pAppSettings;
 
   UINT CodePage = GetUserCodePage();
   m_Font = GetCodePageFont(CodePage, 14);
+
+  m_setup = false;
+  m_externalMonitorRect = RECT();
+  m_dasherWindwowRect = RECT();
+  m_popupRect = RECT();
 }
 
 HWND CPopup::Create(HWND hParent, bool bNewWithDate) {
@@ -61,24 +76,27 @@ HWND CPopup::Create(HWND hParent, bool bNewWithDate) {
 CPopup::~CPopup() {
   DeleteObject(m_Font);
 }
+
 void CPopup::setupPopup() {
-	//Calculate the size of the windows,displays
-	calculateDisplayProperties();
+	if (!m_setup) {
+		m_setup = true;
 
-	//Determine the placement of the popup
-	positionPopup();
+		//Calculate the size of the windows,displays
+		calculateDisplayProperties();
 
-	//If enabled, show and start the auto update timer
-	if (m_pAppSettings->GetBoolParameter(APP_BP_POPUP_ENABLE) == true) {
-		//Show the Popup
-		ShowWindow(SW_SHOW);
-		//Fire the update timer
-		CDasher* dasher = (CDasher*)m_pDasherInterface; //Cast for concrete implementation
-		dasher->configurePopupTimer(true);
+		//Determine the placement of the popup
+		positionPopup();
+
+		//If enabled, show and start the auto update timer
+		if (m_pAppSettings->GetBoolParameter(APP_BP_POPUP_ENABLE) == true) {
+			OutputDebugString(L"Popup: Show on Load\n");
+			//Show the Popup
+			ShowWindow(SW_SHOW);
+			//Fire the update timer
+			CDasher* dasher = (CDasher*)m_pDasherInterface; //Cast for concrete implementation
+			dasher->configurePopupTimer(true);
+		}
 	}
-}
-void CPopup::Move(int x, int y, int Width, int Height) {
-  MoveWindow( x, y, Width, Height, TRUE);
 }
 
 void CPopup::SetFont(string Name, long Size) {
@@ -93,10 +111,9 @@ void CPopup::SetFont(string Name, long Size) {
     UINT CodePage = GetUserCodePage();
     m_Font = GetCodePageFont(CodePage, -Size);
   }
-  else
-    m_Font = CreateFont(-Size, 0, 0, 0, FW_DONTCARE, FALSE, FALSE, FALSE, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, FF_DONTCARE, FontName.c_str());    // DEFAULT_CHARSET => font made just from Size and FontName
-
-
+  else {
+	  m_Font = CreateFont(-Size, 0, 0, 0, FW_DONTCARE, FALSE, FALSE, FALSE, DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, FF_DONTCARE, FontName.c_str());    // DEFAULT_CHARSET => font made just from Size and FontName
+  }
   SendMessage(WM_SETFONT, (WPARAM) m_Font, true);
 }
 
@@ -104,6 +121,11 @@ void CPopup::SetInterface(Dasher::CDasherInterfaceBase *DasherInterface) {
   m_pDasherInterface = DasherInterface;
 }
 
+
+/**
+* Text Display Management- used to update the display with different text 
+*/
+//Timer callback function
 void CPopup::updateDisplay(const std::string sText) {
   //If the display output has changed.. update the popup window
   if (sText.compare(m_Output) != 0) {
@@ -111,30 +133,35 @@ void CPopup::updateDisplay(const std::string sText) {
     output(m_Output);
   }
 }
-
+//Exposed Method so outside classes can force an update on the screen
 void CPopup::output(const std::string &sText) {
   wstring String;
   WinUTF8::UTF8string_to_wstring(sText, String);
   InsertText(String);
 }
-
+//Actually updates the window with the provided text
 void CPopup::InsertText(Tstring InsertText) {
   //Update entire screen
   SendMessage(WM_SETTEXT, TRUE, (LPARAM)InsertText.c_str());
   //Scroll to bottom
-  SendMessage(EM_LINESCROLL, 0, 5);
+  SendMessage(EM_LINESCROLL, 0, INT_MAX); //Force to end of buffer with max integer
 }
 
+
+/**
+* Popup Actionables- called when parameter changes in settings, or toolbar button is pressed
+* BUG: Seems to be called twice on parameter changes
+*/
 void CPopup::HandleParameterChange(int iParameter) {
   switch(iParameter) {
   case APP_SP_POPUP_FONT:
   case APP_LP_POPUP_FONT_SIZE:
-
     SetFont(m_pAppSettings->GetStringParameter(APP_SP_POPUP_FONT), m_pAppSettings->GetLongParameter(APP_LP_POPUP_FONT_SIZE));
     break;
   case APP_BP_POPUP_ENABLE:
 	 OutputDebugString(L"Request to show/hide popup"); //Log Updated Display to console
 	if(m_pAppSettings->GetBoolParameter(APP_BP_POPUP_ENABLE) == true){
+	  OutputDebugString(L"..show\n");
 	  ShowWindow(SW_SHOW);
 	  CDasher* dasher = (CDasher*)m_pDasherInterface; //Cast for concrete implementation
 	  dasher->configurePopupTimer(true);
@@ -153,31 +180,29 @@ void CPopup::HandleParameterChange(int iParameter) {
     break;
   }
 }
-
+//Toolbar quick action ignores 'use external monitor' setting
+//Forces external monitor usages (fi exists)
 bool CPopup::processToolbarButtonPress() {
 	bool popupEnabled = false;
 	OutputDebugString(L"Toolbar--> Request to show/hide popup"); //Log Updated Display to console
 	popupEnabled = m_pAppSettings->GetBoolParameter(APP_BP_POPUP_ENABLE);
 	//Action depends on current status
 	if (popupEnabled == false) {
-
+		OutputDebugString(L"..on..");
 		//Quick button possitions fully on the external monitor, if monitor exists
 		LPRECT popupDisplayRect;
-		if (IsRectEmpty(&externalMonitorRect)) {
-			popupDisplayRect = &popupRect;
+		if (isExtMonitorDetected()) {
+			OutputDebugString(L"..display\n");
+			popupDisplayRect = &m_externalMonitorRect;
 		}
 		else {
-			popupDisplayRect = &externalMonitorRect;
+			OutputDebugString(L"..popup\n");
+			popupDisplayRect = &m_popupRect;
 		}
 		MoveWindow(popupDisplayRect);
-
-		ShowWindow(SW_SHOW);
-		CDasher* dasher = (CDasher*)m_pDasherInterface; //Cast for concrete implementation
-		dasher->configurePopupTimer(true);
 	}
 	else {
 		OutputDebugString(L"..Hide Popup\n"); //Log Updated Display to console
-		ShowWindow(SW_HIDE);
 	}
 
 	//Update the state flag
@@ -187,6 +212,12 @@ bool CPopup::processToolbarButtonPress() {
 	return popupEnabled;
 }
 
+/**
+* Popup Management and Placement
+*/
+void CPopup::Move(int x, int y, int Width, int Height) {
+	MoveWindow(x, y, Width, Height, TRUE);
+}
 
 RECT CPopup::getInitialWindow() {
 	RECT rect;
@@ -195,35 +226,45 @@ RECT CPopup::getInitialWindow() {
 	};
 	return rect;
 }
+
 void CPopup::calculateDisplayProperties() {
 	getDasherWidnowInfo();
-	getMonitorInfo(); //Warning, asysnchronis call
+	//Warning, assync call, enumerates all displays
+	getMonitorInfo();
 }
+
 void CPopup::positionPopup() {
 	LPRECT popupDisplayRect;
 	if (m_pAppSettings->GetBoolParameter(APP_BP_POPUP_EXTERNAL_SCREEN) == true) {
 		//May have setting to use external, but does external screen exists?
-		if (IsRectEmpty(&externalMonitorRect)) {
-			popupDisplayRect = &popupRect;
+		if (isExtMonitorDetected()) {
+			popupDisplayRect = &m_externalMonitorRect;
 		}
 		else {
-			popupDisplayRect = &externalMonitorRect;
+			popupDisplayRect = &m_popupRect;
 		}
 	}
 	else {
-		popupDisplayRect = &popupRect;
+		popupDisplayRect = &m_popupRect;
 	}
 
 	//Redraw in the correct location
 	MoveWindow(popupDisplayRect, true);
 }
-bool CPopup::getMonitorInfo()
-{
-	RECT* userData[2] = { &dasherWindwowRect, &externalMonitorRect };
-	if (EnumDisplayMonitors(NULL, NULL, MonitorEnumProc, (LPARAM)&userData))
-		return true;
-	return false;//signals an error
+
+bool CPopup::isExtMonitorDetected() {
+	bool retVal = false;
+	if (!IsRectEmpty(&m_externalMonitorRect)){
+		retVal = true;
+	}
+	return retVal;
 }
+
+void CPopup::getMonitorInfo(){
+	RECT* userData[2] = { &m_dasherWindwowRect, &m_externalMonitorRect };
+	EnumDisplayMonitors(NULL, NULL, MonitorEnumProc, (LPARAM)&userData);
+}
+
 void CPopup::getDasherWidnowInfo() {
 	//Get Dasher Window position and size
 	CDasher* dasher = (CDasher*)m_pDasherInterface; //Cast for concrete implementation
@@ -234,30 +275,23 @@ void CPopup::getDasherWidnowInfo() {
 
 	dasher->GetWindowSize(&iTop, &iLeft, &iBottom, &iRight);
 
-	dasherWindwowRect.top = iTop;
-	dasherWindwowRect.left = iLeft;
-	dasherWindwowRect.right = iRight;
-	dasherWindwowRect.bottom = iBottom;
+	m_dasherWindwowRect.top = iTop;
+	m_dasherWindwowRect.left = iLeft;
+	m_dasherWindwowRect.right = iRight;
+	m_dasherWindwowRect.bottom = iBottom;
 
-	//Calculate default size based on dasher size
-	popupRect.top = dasherWindwowRect.top;
-	popupRect.left = dasherWindwowRect.right + 20;
-	popupRect.bottom = (dasherWindwowRect.bottom - dasherWindwowRect.top) / 2;
-	popupRect.right = (dasherWindwowRect.right - dasherWindwowRect.left) + popupRect.left;
-
-	//TEMP- JC
-	//Setting default position to same as dasher window.
-	popupRect.top = iTop+100;
-	popupRect.left = iLeft+100;
-	popupRect.right = iRight+100;
-	popupRect.bottom = iTop + (iBottom - iTop)/2;
+	//Initialize our window based on the dasher window
+	m_popupRect.top = m_dasherWindwowRect.top + 100;
+	m_popupRect.left = m_dasherWindwowRect.left + 100;
+	m_popupRect.right = m_dasherWindwowRect.right + 100;
+	m_popupRect.bottom = m_dasherWindwowRect.top + (m_dasherWindwowRect.bottom - m_dasherWindwowRect.top)/2;
 }
+
 BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMonitor, LPARAM dwData) {
 	RECT monitorCoordinates = *lprcMonitor;
 	RECT** userData = (RECT**)dwData;
 	RECT* dasherRect = userData[0];
 	RECT* externRect = userData[1];
-
 
 	//If this monitor contains the dasher Window, it is primary monitor
 	//Else it is external monitor, and should be used for popup.
@@ -268,14 +302,10 @@ BOOL CALLBACK MonitorEnumProc(HMONITOR hMonitor, HDC hdcMonitor, LPRECT lprcMoni
 	else {
 		//Never called if no extra monitor
 		*externRect = monitorCoordinates;
-
-		OutputDebugString(L"Use this rect as external\n");
-		char output[100];
-		sprintf(output, "Monitor[%d],%d,%d,%d,%d\n", 0, monitorCoordinates.left, monitorCoordinates.top, monitorCoordinates.right, monitorCoordinates.bottom);
-		OutputDebugStringA(output);
 	}
 	return TRUE;
 }
+
 BOOL contains(RECT rectA, RECT rectB) {
 	return (rectA.left < rectB.right && rectA.right > rectB.left &&
 		rectA.top < rectB.bottom && rectA.bottom > rectB.top);

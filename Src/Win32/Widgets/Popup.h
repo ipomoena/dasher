@@ -84,6 +84,7 @@ class CPopup : public ATL::CWindowImpl<CPopup> {
   
  private:  
   Dasher::CDasherInterfaceBase *m_pDasherInterface;
+  bool m_setup;
   
   HWND Parent;
   HWND m_popup;
@@ -105,11 +106,13 @@ class CPopup : public ATL::CWindowImpl<CPopup> {
   void calculateDisplayProperties();
   void positionPopup();
   void getDasherWidnowInfo();
-  bool getMonitorInfo();
+  void getMonitorInfo();
+  bool isExtMonitorDetected();
 
-  RECT dasherWindwowRect;
-  RECT externalMonitorRect;
-  RECT popupRect;
+  RECT m_dasherWindwowRect;
+  RECT m_externalMonitorRect;
+  RECT m_popupRect; //The current rect being used for the popup
+  
 };
 
 #endif /* #ifndef __CPopup_h__ */
