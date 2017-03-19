@@ -152,6 +152,7 @@ int main(int argc, char *argv[]) {
   SCommandLine sCommandLine;
 
   gboolean do_option_help = false;
+  gboolean do_show_version = false;
   static const GOptionEntry options[] = {
     //   {"timedata", 'w', 0, G_OPTION_ARG_NONE, &timedata, "Write basic timing information to stdout", NULL},
     //   {"preferences", 'p', 0, G_OPTION_ARG_NONE, &preferences, "Show preferences window only", NULL},
@@ -162,8 +163,10 @@ int main(int argc, char *argv[]) {
     // Note to translators: This is the help string for "--options"
     {"options", 'o', 0, G_OPTION_ARG_STRING, &(sCommandLine.szOptions), N_("Override stored options"), NULL},
     {"config", 'c', 0, G_OPTION_ARG_STRING, &(sCommandLine.szConfigFile), N_("XML configuration file name"), NULL},
-        // Note to translators: This is the help string for "--help-options"
+    // Note to translators: This is the help string for "--help-options"
     {"help-options", 0, 0, G_OPTION_ARG_NONE, &do_option_help, N_("Describe \"--options\"."), NULL},
+    // Note to translators: This is the help string for "--version"
+    {"version", 'v', 0, G_OPTION_ARG_NONE, &do_show_version, N_("Show the version details."), NULL},
     {NULL}
   };
 
@@ -186,6 +189,11 @@ int main(int argc, char *argv[]) {
   if (do_option_help)
   {
     option_help();
+    return 0;
+  }
+  if (do_show_version)
+  {
+    option_version();
     return 0;
   }
 
