@@ -175,6 +175,7 @@ int main(int argc, char *argv[]) {
   GError *error = nullptr;
   if (!g_option_context_parse(goptcontext, &argc, &argv, &error)) {
     g_print("option parsing failed: %s\n", error->message);
+    g_print("Try 'dasher --help' for more information.\n");
     exit (1);
   }
 
