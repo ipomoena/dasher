@@ -178,9 +178,7 @@ int main(int argc, char *argv[]) {
   GError *error = nullptr;
   if (!g_option_context_parse(goptcontext, &argc, &argv, &error)) {
     g_print("option parsing failed: %s\n", error->message);
-    /* Note to translators: This is the help string for unrecognized command line options.
-     * Do not translate 'dasher --help' part. 
-     */
+    // Note to translators: This is the help string for unrecognized command line options. Do not translate 'dasher --help' part.
     g_print("%s\n", _("Try 'dasher --help' for more information.")); 
     exit (1);
   }
