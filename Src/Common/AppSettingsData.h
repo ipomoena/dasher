@@ -26,10 +26,7 @@
 Dasher::Settings::bp_table app_boolparamtable[] = {
   { APP_BP_TIME_STAMP, "TimeStampNewFiles", Persistence::PERSISTENT, true, "TimeStampNewFiles" },
   { APP_BP_CONFIRM_UNSAVED, "ConfirmUnsavedFiles", Persistence::PERSISTENT, true, "ConfirmUnsavedFiles" },
-  { APP_BP_SHOW_TOOLBAR, "ViewToolbar", Persistence::PERSISTENT, true, "ViewToolbar"},
-  { APP_BP_POPUP_ENABLE, "PopupEnable", Persistence::PERSISTENT, false, "PopupEnable"},
-  { APP_BP_POPUP_EXTERNAL_SCREEN, "PopupFullScreen", Persistence::PERSISTENT, false, "PopupFullScreen"},
-  { APP_BP_POPUP_INFRONT, "PopupInfront", Persistence::PERSISTENT, false, "PopupInfront"},
+  {APP_BP_SHOW_TOOLBAR, "ViewToolbar", Persistence::PERSISTENT, true, "ViewToolbar"},
 #ifdef WITH_MAEMO
   { APP_BP_SHOW_STATUSBAR, "ViewStatusbar", Persistence::PERSISTENT, false, "ViewStatusbar" },
 #else
@@ -42,7 +39,6 @@ Dasher::Settings::bp_table app_boolparamtable[] = {
 Dasher::Settings::lp_table app_longparamtable[] = {
   {APP_LP_FILE_ENCODING, "FileEncodingFormat", Persistence::PERSISTENT, -1, "FileEncodingFormat"},
   {APP_LP_EDIT_FONT_SIZE, "EditFontSize", Persistence::PERSISTENT, 0, "EditFontSize"},
-  {APP_LP_POPUP_FONT_SIZE, "PopupFontSize", Persistence::PERSISTENT, 0, "PopupFontSize"},
   {APP_LP_EDIT_SIZE, "EditSize", Persistence::PERSISTENT, 75, "The size of the edit window"},
   {APP_LP_SCREEN_WIDTH, "ScreenWidth", Persistence::PERSISTENT, 400, "ScreenWidth"},
   {APP_LP_SCREEN_HEIGHT, "ScreenHeight", Persistence::PERSISTENT, 500, "ScreenHeight"},
@@ -59,7 +55,6 @@ Dasher::Settings::sp_table app_stringparamtable[] = {
   {APP_SP_EDIT_FONT, "EditFont", Persistence::PERSISTENT, "Sans 20", "EditFont"},
 #else
   {APP_SP_EDIT_FONT, "EditFont", Persistence::PERSISTENT, "Sans 10", "EditFont"},
-  {APP_SP_POPUP_FONT, "PopupFont", Persistence::PERSISTENT, "Sans 10", "PopupFont"},
 #endif
 { APP_SP_TOOLBAR_ID, "ToolbarID", Persistence::PERSISTENT, "", "ToolbarID" },
 };

@@ -17,7 +17,6 @@
 #include "ControlPage.h"
 #include "ViewPage.h"
 #include "AdvancedPage.h"
-#include "PopupPage.h"
 #include "../AppSettings.h"
 
 namespace Dasher {
@@ -37,7 +36,6 @@ private:
   CControlPage *m_pControlPage;
   CViewPage *m_pViewPage;
   CAdvancedPage *m_pAdvancedPage;
-  CPopupPage *m_pPopupPage;
 };
 
 #endif  /* #ifndef __PrefsBox_h__ */

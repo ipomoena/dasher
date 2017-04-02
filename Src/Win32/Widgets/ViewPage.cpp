@@ -148,6 +148,7 @@ bool CViewPage::Apply() {
 }
 
 LRESULT CViewPage::WndProc(HWND Window, UINT message, WPARAM wParam, LPARAM lParam) {
+
   // most things we pass on to CPrefsPageBase, but we need to handle slider motion
   switch (message) {
 

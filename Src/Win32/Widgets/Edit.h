@@ -74,6 +74,7 @@ class CEdit : public ATL::CWindowImpl<CEdit> {
   HRESULT OnKeyUp(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
   HRESULT OnCommand(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 
+
   void Move(int x, int y, int Width, int Height);
 
   unsigned int OffsetAfterMove(unsigned int offsetBefore, bool bForwards,  Dasher::CControlManager::EditDistance iDist);
@@ -111,9 +112,6 @@ class CEdit : public ATL::CWindowImpl<CEdit> {
 
   //ACL Making these public so can be called directly from CDasher
   void HandleParameterChange(int iParameter);
-
-  //Expose current text- Used by the Popup Window to update external display window
-  std::string getOutput();
 
  protected:
   bool m_dirty;
