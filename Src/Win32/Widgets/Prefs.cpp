@@ -28,10 +28,12 @@ CPrefs::CPrefs(HWND hParent, CDasher *pDasher, CAppSettings *pAppSettings) {
   m_pControlPage = new CControlPage(hParent, pDasher, pAppSettings);
   m_pViewPage = new CViewPage(hParent, pAppSettings);
   m_pAdvancedPage = new CAdvancedPage(hParent, pAppSettings);
+  m_pPopupPage = new CPopupPage(hParent, pAppSettings);
+
 
   // Set up the property sheets which go into the preferences
   // dialogue.
-  PROPSHEETPAGE psp[4];
+  PROPSHEETPAGE psp[5];
   memset(psp, 0, sizeof(psp));
   psp[0].dwSize = sizeof(PROPSHEETPAGE);
   psp[0].dwFlags = PSP_USEICONID | PSP_USETITLE | PSP_PREMATURE;
@@ -72,6 +74,16 @@ CPrefs::CPrefs(HWND hParent, CDasher *pDasher, CAppSettings *pAppSettings) {
   psp[3].pszTitle =  MAKEINTRESOURCE(IDS_PREFS_LM);
   psp[3].lParam = (LPARAM) m_pAdvancedPage;
   psp[3].pfnCallback = NULL;
+
+  psp[4].dwSize = sizeof(PROPSHEETPAGE);
+  psp[4].dwFlags = PSP_USEICONID | PSP_USETITLE | PSP_PREMATURE;
+  psp[4].hInstance = WinHelper::hInstApp;
+  psp[4].pszTemplate = MAKEINTRESOURCE(IDS_PREFS_POPUP);
+  psp[4].pszIcon = NULL;
+  psp[4].pfnDlgProc = (DLGPROC)WinWrapMap::PSWndProc;
+  psp[4].pszTitle = MAKEINTRESOURCE(IDS_PREFS_POPUP);
+  psp[4].lParam = (LPARAM)m_pPopupPage;
+  psp[4].pfnCallback = NULL;
   
   PROPSHEETHEADER psh;
   memset(&psh, 0, sizeof(psh));

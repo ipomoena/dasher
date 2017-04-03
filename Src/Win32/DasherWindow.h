@@ -14,6 +14,7 @@
 #include "Widgets/Splitter.h"
 #include "Widgets/StatusControl.h"
 #include "Widgets/Edit.h"
+#include "Widgets/Popup.h"
 
 class CToolbar;
 namespace Dasher {
@@ -39,6 +40,7 @@ public:
 		MESSAGE_HANDLER(WM_INITMENUPOPUP,OnInitMenuPopup)
  		MESSAGE_HANDLER(WM_SETFOCUS,OnSetFocus)
 		MESSAGE_HANDLER(WM_WINDOWPOSCHANGED,OnWindowPosChanged)
+		MESSAGE_HANDLER(WM_TIMER,OnTimer)
 		MESSAGE_RANGE_HANDLER(0xC000,0xFFFF,OnOther)
 	END_MSG_MAP()
 
@@ -52,6 +54,7 @@ public:
 	LRESULT OnDestroy(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnClose(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 	LRESULT OnCommand(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+	LRESULT OnTimer(UINT message, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 
 
 	// Create window (and children)
@@ -59,6 +62,7 @@ public:
 	HWND Create();
 
 	void Show(int nCmdShow);
+	void configurePopupTimer(bool enable);
 
   void HandleWinEvent(HWINEVENTHOOK hWinEventHook, DWORD event, HWND hwnd, 
     LONG idObject, LONG idChild, DWORD dwEventThread, DWORD dwmsEventTime);
@@ -74,12 +78,15 @@ private:
 
   bool m_bFullyCreated;
 	Dasher::CDasher *m_pDasher;
+	
+	HWND hWnd;
 
 	HACCEL hAccelTable;
 
 	// Widgets:
 	CToolbar *m_pToolbar;
 	CEdit *m_pEdit;
+	CPopup *m_pPopup;
 	//CCanvas *m_pCanvas;
 	CSplitter *m_pSplitter;
 	CStatusControl *m_pSpeedAlphabetBar;

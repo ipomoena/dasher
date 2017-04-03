@@ -170,6 +170,8 @@
     <ClCompile Include="Widgets\ControlPage.cpp" />
     <ClCompile Include="Widgets\Edit.cpp" />
     <ClCompile Include="Widgets\FilenameGUI.cpp" />
+    <ClCompile Include="Widgets\Popup.cpp" />
+    <ClCompile Include="Widgets\PopupPage.cpp" />
     <ClCompile Include="Widgets\Prefs.cpp" />
     <ClCompile Include="Widgets\PrefsPageBase.cpp" />
     <ClCompile Include="Widgets\Splitter.cpp" />
@@ -196,6 +198,8 @@
     <ClInclude Include="Widgets\ControlPage.h" />
     <ClInclude Include="Widgets\Edit.h" />
     <ClInclude Include="Widgets\FilenameGUI.h" />
+    <ClInclude Include="Widgets\Popup.h" />
+    <ClInclude Include="Widgets\PopupPage.h" />
     <ClInclude Include="Widgets\Prefs.h" />
     <ClInclude Include="Widgets\PrefsPageBase.h" />
     <ClInclude Include="Widgets\Splitter.h" />

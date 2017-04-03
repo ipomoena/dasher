@@ -178,7 +178,7 @@ LRESULT CAdvancedPage::WndProc(HWND Window, UINT message, WPARAM wParam, LPARAM 
     switch (LOWORD(wParam)) {
 
     case IDC_EFONT_BUTTON:
-      // TODO: Put this in a function
+    // TODO: Put this in a function
     {
       CHOOSEFONT Data;
       LOGFONT lf;

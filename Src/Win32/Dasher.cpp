@@ -10,6 +10,7 @@
 #include "DasherMouseInput.h"
 #include "DasherWindow.h"
 #include "Widgets/Edit.h"
+#include "Widgets/Popup.h"
 
 #include "Sockets/SocketInput.h"
 #include "BTSocketInput.h"
@@ -26,8 +27,8 @@ using namespace WinUTF8;
 
 CONST UINT WM_DASHER_FOCUS = RegisterWindowMessage(L"WM_DASHER_FOCUS");
 
-CDasher::CDasher(HWND Parent, CDasherWindow *pWindow, CEdit *pEdit, Dasher::CSettingsStore* settings, CFileUtils* fileUtils)
-  : CDashIntfScreenMsgs(settings, fileUtils), m_hParent(Parent), m_pWindow(pWindow), m_pEdit(pEdit) {
+CDasher::CDasher(HWND Parent, CDasherWindow *pWindow, CEdit *pEdit, CPopup *pPopup, Dasher::CSettingsStore* settings, CFileUtils* fileUtils)
+  : CDashIntfScreenMsgs(settings, fileUtils), m_hParent(Parent), m_pWindow(pWindow), m_pEdit(pEdit), m_pPopup(pPopup) {
   // This class will be a wrapper for the Dasher 'control' - think ActiveX
 
   // Set up COM for the accessibility stuff
@@ -109,6 +110,7 @@ void Dasher::CDasher::HandleEvent(int iParameter) {
   CDashIntfScreenMsgs::HandleEvent(iParameter);
   m_pWindow->HandleParameterChange(iParameter);
   m_pEdit->HandleParameterChange(iParameter);
+  m_pPopup->HandleParameterChange(iParameter);
   if (iParameter == SP_DASHER_FONT)
     m_pCanvas->SetFont(GetStringParameter(SP_DASHER_FONT));
 }
@@ -349,4 +351,9 @@ int CDasher::GetAllContextLenght(){
 
 std::string CDasher::GetTextAroundCursor(CControlManager::EditDistance iDist) {
   return m_pEdit->GetTextAroundCursor(iDist);
+}
+
+void CDasher::configurePopupTimer(bool enable) {
+	//Timer is managed by the window object
+	m_pWindow->configurePopupTimer(enable);
 }
