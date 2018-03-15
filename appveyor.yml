@@ -1,0 +1,4 @@
+test_script:
+  - cmd: make
+  - cmd: (cd Testing/dasher_tests; make)
+  - cmd: ./Testing/dasher_tests/run_tests.sh

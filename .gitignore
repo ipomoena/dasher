@@ -7,7 +7,6 @@
 *.o
 *.omf
 .tarball-version
-Makefile
 Makefile.in
 dasher.xml
 *.Plo
