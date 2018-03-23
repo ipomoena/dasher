@@ -4,9 +4,9 @@ This is a guide for Dasher developers on Windows.
 
 ##Build Status
 
-+Windows:
-+[![Build status](https://ci.appveyor.com/api/projects/status/hpvrm5230qlay15m?svg=true)](https://ci.appveyor.com/project/erdemkiraz/dasher)
-+\-
+Windows:
+[![Build status](https://ci.appveyor.com/api/projects/status/hpvrm5230qlay15m?svg=true)](https://ci.appveyor.com/project/erdemkiraz/dasher)
++
 Java:
 [![CircleCI Build Status](https://circleci.com/gh/dasher-project/dasher.svg?style=shield)](https://circleci.com/gh/dasher-project/dasher)
 
