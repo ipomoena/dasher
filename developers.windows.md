@@ -10,7 +10,7 @@ Windows:
 Java:
 [![CircleCI Build Status](https://circleci.com/gh/dasher-project/dasher.svg?style=shield)](https://circleci.com/gh/dasher-project/dasher)
 
-## Dasher Version 5.0
+## Dasher Version 4.11
 
 Dasher is a zooming predictive text entry system, designed for situations where keyboard input is impractical (for instance, accessibility or PDAs). 
 It is usable with highly limited amounts of physical input while still allowing high rates of text entry.
