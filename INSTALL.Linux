@@ -11,30 +11,48 @@ etc.), which are described in the 'INSTALL' file.  The following is
 specific to building and installing Dasher on Linux.  The Dasher
 maintainer documentation is at http://live.gnome.org/Dasher.
 
+1) Fork the project from github.
+
+2) Clone the repo to your machine
+
+ $ git clone https://github.com/<your account>/dasher.git
+ $ cd dasher
+
+4) Install dependencies
 If you are building sources from the Git repository then you must
 first install all the packages required to build Dasher.  On Debian
 based distributions the following can be used.
 
-  packages="g++
+ $ packages="g++
             gnome-common
             gnome-doc-utils
             libatspi2.0-dev
             libgtk-3-dev
             libspeechd-dev"
-  sudo apt-get install $packages
 
-Then autogen:
+ $ sudo apt-get install $packages
 
-  ./autogen.sh
+5) Configuration and Install
+autogen:
+
+ $ ./autogen.sh
+ $ make
+ $ sudo make instal
 
 If the speech support is desired then
 
-  ./autogen.sh --enable-speech=yes
+ $ ./autogen.sh --enable-speech=yes
+ $ make
+ $ sudo make install
 
-After this, follow "Basic Installation" section in the "INSTALL" file.
-For the "configure" step, the following configure-time options are
-also available (see also the section "`configure' Invocation" in
-the "INSTALL" file):
+6) Run dasher
+ $/usr/local/bin/dasher
+
+7) [Optional] Create desktop shortcuts
+
+ $ cd dasher
+ $ ./create-linux-desktop-shortcuts.sh
+
 
 Options
 =======
@@ -81,9 +99,63 @@ Desktop Shortcuts
 After the installation is done, for Ubuntu and derivatives
 (e.g., Goobuntu), you can create desktop shortcuts starting Dasher in
 different profiles by running:
-
-  ./create-linux-desktop-shortcuts.sh
+ $ cd dasher
+ $ ./create-linux-desktop-shortcuts.sh
 
 The Contributor’s Guide
 =======================
-If you would like to contribute to this project, please check out the following guide: https://docs.google.com/document/d/1qosKPV0GXbHs69PyvK9BR3S3oNgdV8il7AVfO1M4Fh4
+
+Dasher makes use of the GNU autotools system (automake, autoconf
+etc.), which are described in the 'INSTALL' file.  The following is
+specific to building and installing Dasher for contributors on Linux.  The Dasher
+maintainer documentation is at http://live.gnome.org/Dasher.
+
+1) Fork the project from github.
+
+2) Clone the repo to your machine
+
+ $ git clone https://github.com/<your account>/dasher.git
+ $ cd dasher
+
+3) Add the forked repo as the upstream repo
+ $ git remote add upstream https://github.com/GNOME/dasher.git
+
+
+4) Install dependencies
+If you are building sources from the Git repository then you must
+first install all the packages required to build Dasher.  On Debian
+based distributions the following can be used.
+
+ $ packages="g++
+            gnome-common
+            gnome-doc-utils
+            libatspi2.0-dev
+            libgtk-3-dev
+            libspeechd-dev"
+
+ $ sudo apt-get install $packages
+
+5) Configuration and Install
+
+ $ ./autogen.sh --enable-speech=yes
+ $ make
+ $ sudo make install
+
+6) Run dasher
+ $/usr/local/bin/dasher
+
+Syncing Your Fork
+==================
+
+Reference: https://help.github.com/articles/syncing-a-fork/
+1) Fetching latest changes:
+ $ git fetch upstream
+2)Merge latest changes to your local fork repo's master
+ $ git merge upstream/master
+3)Push latest changes to your remote fork repo
+ $ git push origin master
+
+
+
+
+
