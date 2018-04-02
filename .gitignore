@@ -57,3 +57,5 @@ Src/DasherCore/Alphabet/.dirstamp
 .autotools
 .cproject
 .project
+
+.gradle/
