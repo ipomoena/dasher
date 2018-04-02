@@ -22,5 +22,7 @@ jobs:
             echo Switching to java directory
             cd java
             echo Running tests
-            gradle test
+            gradle test -i
+      - store_artifacts:
+          path:  build/reports/tests/test/
 
