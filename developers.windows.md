@@ -37,11 +37,11 @@ Src/Win32 directory.
 
 **NOTE** 
 
-For 2017 version needs Visual Studio 2015(v140) tool.
+For 2017 version needs Visual Studio 2015(v140) tool. (Or you need to add some additional packages.)
 
 **NOTE** 
 
-Default build tools of Visiual Studio don't work. So you need to modify the Target Framework and Platform Toolset. Instructions can be found at [ How to Retarget ](https://docs.microsoft.com/en-us/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)
+Default build tools of Visiual Studio may not work. So you need to modify the Target Framework and Platform Toolset. Instructions can be found at [ How to Retarget ](https://docs.microsoft.com/en-us/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)
 
 
 
