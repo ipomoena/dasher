@@ -201,20 +201,20 @@ void COSXDasherControl::Train(NSString *fileName) {
 
 bool COSXDasherControl::WriteUserDataFile(const std::string &filename, const std::string &strNewText, bool append)
 {
-	if(strNewText.length() == 0)
-	  return false;
-	
-	std::string strFilename(StdStringFromNSString(userDir) + filename);
-	
-	NSLog(@"Write user data file: %s", strFilename.c_str());
-	int flg=O_CREAT|O_WRONLY;
-	int mode=S_IRUSR|S_IWUSR;
-	if(append)
-		flg|=O_APPEND;
-	int fd=open(strFilename.c_str(),flg, mode);
-	write(fd,strNewText.c_str(),strNewText.length());
-	close(fd);
-	return true;
+  if(strNewText.length() == 0)
+    return false;
+  
+  std::string strFilename(StdStringFromNSString(userDir) + filename);
+  
+  NSLog(@"Write user data file: %s", strFilename.c_str());
+  int flg=O_CREAT|O_WRONLY;
+  int mode=S_IRUSR|S_IWUSR;
+  if(append)
+    flg|=O_APPEND;
+  int fd=open(strFilename.c_str(),flg, mode);
+  write(fd,strNewText.c_str(),strNewText.length());
+  close(fd);
+  return true;
 }
 
 NSDictionary *COSXDasherControl::ParameterDictionary() {
@@ -325,7 +325,7 @@ std::string COSXDasherControl::GetAllContext() {
 }
 int COSXDasherControl::GetAllContextLenght()
 {
-	return StdStringFromNSString([dasherEdit allContext]).length();
+  return StdStringFromNSString([dasherEdit allContext]).length();
 }
 void COSXDasherControl::ClearAllContext() {
   [dasherEdit clearContext];
