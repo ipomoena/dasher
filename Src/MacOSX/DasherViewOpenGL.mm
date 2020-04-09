@@ -57,7 +57,7 @@ protected:
 
     //white text on (default) transparent background means that when we texture
     //a surface using a colour, the text appears in that colour...
-    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:[NSFont fontWithName:dasherView.cachedFontName size:iFontSize], NSFontAttributeName, [NSColor whiteColor], NSForegroundColorAttributeName, nil];
+    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:Font(iFontSize), NSFontAttributeName, [NSColor whiteColor], NSForegroundColorAttributeName, nil];
     //dictionaryWith...: does an autorelease - only "alloc" methods do not.
     
     if (bWrap)
@@ -68,9 +68,15 @@ protected:
   }
   
   CGSize TextSize(NSString *str, unsigned int iFontSize, bool bWrap) {
-    NSFont *font=[NSFont fontWithName:dasherView.cachedFontName size:iFontSize];
-    NSDictionary *attrs =[NSDictionary dictionaryWithObject:(font ? font : [NSFont systemFontOfSize:iFontSize]) forKey:NSFontAttributeName];
+    NSDictionary *attrs =[NSDictionary dictionaryWithObject:(Font(iFontSize)) forKey:NSFontAttributeName];
     return NSSizeToCGSize(bWrap ? ([str boundingRectWithSize:NSMakeSize(GetWidth(), CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs].size) : ([str sizeWithAttributes:attrs]));
+  }
+  
+private:
+  NSFont* Font(const unsigned int iFontSize) {
+    NSFont *font=[NSFont fontWithName:dasherView.cachedFontName size:iFontSize];
+    font = font ? font : [NSFont systemFontOfSize:iFontSize];
+    return font;
   }
 };
 
